@@ -5,9 +5,9 @@ add_library(core-engine STATIC)
 set(CORE_SOURCES
     engine.cpp
     layer.cpp
-    raster_layer.cpp
     document.cpp
     brush_engine.cpp
+    tool.cpp
 )
 
 target_sources(core-engine PRIVATE ${CORE_SOURCES})
@@ -18,10 +18,14 @@ target_include_directories(core-engine PUBLIC
 )
 
 # Link libraries
-target_link_libraries(core-engine)
+target_link_libraries(core-engine
+    Qt6::Core
+    Qt6::Gui
+)
 
 # Set properties
 set_target_properties(core-engine PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
+    AUTOMOC ON
 )

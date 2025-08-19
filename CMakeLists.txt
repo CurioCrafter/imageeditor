@@ -5,45 +5,50 @@ project(AdvancedImageEditor VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Enable Qt6 specific features
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
 # Set output directories
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 # Build options
-option(BUILD_UI "Build user interface components" OFF)
-option(BUILD_GPU "Build GPU acceleration components" OFF)
+option(BUILD_UI "Build user interface components" ON)
+option(BUILD_GPU "Build GPU acceleration components" ON)
 option(BUILD_AI "Build AI integration components" OFF)
 option(BUILD_PLUGINS "Build plugin system" OFF)
 option(BUILD_TESTS "Build test suite" OFF)
 option(BUILD_DOCS "Build documentation" OFF)
 
-# Find packages
-find_package(Qt6 COMPONENTS Core Widgets Gui QUIET)
-if(Qt6_FOUND)
-    message(STATUS "Qt6 found - UI support available")
-    
-    # MSVC-specific compiler flags for Qt6
-    if(MSVC)
-        add_compile_options(/Zc:__cplusplus /permissive-)
-    endif()
-else()
-    message(STATUS "Qt6 not found - UI support unavailable")
-endif()
+# Find Qt6 with specific components for Qt6.9.1 compatibility
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Gui OpenGL OpenGLWidgets Concurrent)
 
-# UI is now enabled with MSVC 2022 support
-set(BUILD_UI ON)
-message(STATUS "UI enabled with MSVC 2022 support")
+# Enable Qt6 specific features
+qt6_standard_project_setup()
+
+# MSVC-specific compiler flags for Qt6
+if(MSVC)
+    add_compile_options(/Zc:__cplusplus /permissive-)
+    # Fix for Qt6 MOC compatibility
+    add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x060000)
+endif()
 
 # GPU acceleration packages
 if(BUILD_GPU)
-    find_package(Vulkan QUIET)
-    find_package(OpenGL QUIET)
+    # Find Vulkan (preferred for modern GPU acceleration)
+    find_package(Vulkan REQUIRED)
     if(Vulkan_FOUND)
-        message(STATUS "Vulkan found - GPU acceleration enabled")
+        message(STATUS "Vulkan found - Modern GPU acceleration enabled")
+        message(STATUS "Vulkan version: ${Vulkan_VERSION}")
     endif()
+    
+    # Fallback to OpenGL if Vulkan not available
+    find_package(OpenGL REQUIRED)
     if(OpenGL_FOUND)
-        message(STATUS "OpenGL found - fallback rendering available")
+        message(STATUS "OpenGL found - Fallback GPU acceleration enabled")
     endif()
 endif()
 
@@ -84,7 +89,7 @@ if(BUILD_DOCS)
     add_subdirectory(docs)
 endif()
 
-# Add tools directory (placeholder for now)
+# Add tools directory
 add_subdirectory(src/tools)
 
 # Create main executable
@@ -101,12 +106,11 @@ target_link_libraries(image-editor core-engine)
 
 if(BUILD_UI)
     target_link_libraries(image-editor ui-components)
+    # Link Qt6 libraries
+    target_link_libraries(image-editor Qt6::Core Qt6::Widgets Qt6::Gui Qt6::OpenGL Qt6::OpenGLWidgets Qt6::Concurrent)
 endif()
 
 if(BUILD_GPU)
-    if(Vulkan_FOUND)
-        target_link_libraries(image-editor Vulkan::Vulkan)
-    endif()
     if(OpenGL_FOUND)
         target_link_libraries(image-editor OpenGL::GL)
     endif()
@@ -123,7 +127,6 @@ message(STATUS "BUILD_TESTS: ${BUILD_TESTS}")
 message(STATUS "BUILD_DOCS: ${BUILD_DOCS}")
 message(STATUS "Qt6: ${Qt6_FOUND}")
 if(BUILD_GPU)
-    message(STATUS "Vulkan: ${Vulkan_FOUND}")
     message(STATUS "OpenGL: ${OpenGL_FOUND}")
 endif()
 message(STATUS "==========================")

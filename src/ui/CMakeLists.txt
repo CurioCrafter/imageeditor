@@ -5,6 +5,7 @@ if(BUILD_UI AND Qt6_FOUND)
     add_library(ui-components STATIC
         main_window.cpp
         canvas_view.cpp
+        canvas_widget.cpp
         layer_panel.cpp
         tool_panel.cpp
         color_panel.cpp
@@ -25,6 +26,9 @@ if(BUILD_UI AND Qt6_FOUND)
         Qt6::Core
         Qt6::Widgets
         Qt6::Gui
+        Qt6::OpenGL
+        Qt6::OpenGLWidgets
+        Qt6::Concurrent
     )
     
     # Set properties

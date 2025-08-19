@@ -4186,3 +4186,1035 @@ events:
         - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
         - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/3rdparty/kwin"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake:85 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    name: "Qt6OpenGLPrivate"
+    configs:
+      -
+        filename: "Qt6OpenGLPrivateConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6openglprivate-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.9.1"
+      version_complete: "6.9.1"
+      exact: true
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6OpenGLPrivate"
+      search_paths:
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGL/.."
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/Qt6OpenGLPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/qt6openglprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/qt6openglprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLPrivate/Qt6OpenGLPrivateConfig.cmake"
+      mode: "config"
+      version: "6.9.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    name: "Qt6OpenGL"
+    configs:
+      -
+        filename: "Qt6OpenGLConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6opengl-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.5"
+      version_complete: "6.5"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6OpenGL"
+      search_paths:
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/Qt6OpenGLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/qt6opengl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/qt6opengl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake"
+      mode: "config"
+      version: "6.9.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake:85 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    name: "Qt6OpenGLWidgetsPrivate"
+    configs:
+      -
+        filename: "Qt6OpenGLWidgetsPrivateConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6openglwidgetsprivate-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.9.1"
+      version_complete: "6.9.1"
+      exact: true
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6OpenGLWidgetsPrivate"
+      search_paths:
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLWidgets/.."
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/Qt6OpenGLWidgetsPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/qt6openglwidgetsprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/qt6openglwidgetsprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsPrivate/Qt6OpenGLWidgetsPrivateConfig.cmake"
+      mode: "config"
+      version: "6.9.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    name: "Qt6OpenGLWidgets"
+    configs:
+      -
+        filename: "Qt6OpenGLWidgetsConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6openglwidgets-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.5"
+      version_complete: "6.5"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6OpenGLWidgets"
+      search_paths:
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/Qt6OpenGLWidgetsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/qt6openglwidgets-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/qt6openglwidgets-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsConfig.cmake"
+      mode: "config"
+      version: "6.9.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake:85 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    name: "Qt6ConcurrentPrivate"
+    configs:
+      -
+        filename: "Qt6ConcurrentPrivateConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6concurrentprivate-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.9.1"
+      version_complete: "6.9.1"
+      exact: true
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6ConcurrentPrivate"
+      search_paths:
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Concurrent/.."
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/Qt6ConcurrentPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/qt6concurrentprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ConcurrentPrivateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/qt6concurrentprivate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ConcurrentPrivate/Qt6ConcurrentPrivateConfig.cmake"
+      mode: "config"
+      version: "6.9.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    name: "Qt6Concurrent"
+    configs:
+      -
+        filename: "Qt6ConcurrentConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6concurrent-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.5"
+      version_complete: "6.5"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Concurrent"
+      search_paths:
+        - "C:/Qt/6.9.1/msvc2022_64/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/Qt6ConcurrentConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/andre/Desktop/NewProject/build/CMakeFiles/pkgRedirects/qt6concurrent-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ConcurrentConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/qt6concurrent-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake"
+      mode: "config"
+      version: "6.9.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake:402 (find_program)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:43 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:137 (find_dependency)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    mode: "program"
+    variable: "Vulkan_GLSLC_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslc"
+    candidate_directories:
+      - "C:/Qt/6.9.1/msvc2022_64/bin/"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/"
+      - "C:/Qt/6.9.1/msvc2022_64/"
+      - "C:/VulkanSDK/1.4.321.1/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Users/andre/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Program Files/Google/Chrome/Application/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "C:/Users/andre/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/andre/.dotnet/tools/"
+      - "C:/Users/andre/AppData/Roaming/npm/"
+      - "C:/Program Files/JetBrains/JetBrains Rider 2023.3.6/bin/"
+      - "C:/Users/andre/Downloads/ffmpeg-2025-04-17-git-7684243fbe-full_build/ffmpeg-2025-04-17-git-7684/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/andre/.cargo/bin/"
+      - "C:/Users/andre/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/andre/Downloads/ffmpeg-2025-04-17-git-7684243fbe-full_build/ffmpeg-2025-04-17-git-7684243fbe-full_build/bin/"
+      - "C:/Users/andre/Downloads/colmap-x64-windows-cuda/"
+      - "C:/Users/andre/Downloads/colmap-x64-windows-cuda/bin/"
+      - "C:/platform-tools-latest-windows/platform-tools/"
+      - "C:/Users/andre/.aftman/shims/"
+      - "C:/Users/andre/AppData/Local/Microsoft/WinGet/Packages/jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Qt/"
+      - "C:/Qt/6.9.1/msvc2022_64/bin/"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/"
+      - "C:/Users/andre/.cursor/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/AdvancedImageEditor/bin/"
+      - "C:/Program Files/AdvancedImageEditor/sbin/"
+      - "C:/Program Files/AdvancedImageEditor/"
+    searched_directories:
+      - "C:/Qt/6.9.1/msvc2022_64/bin/glslc.com"
+      - "C:/Qt/6.9.1/msvc2022_64/bin/glslc.exe"
+      - "C:/Qt/6.9.1/msvc2022_64/bin/glslc"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/glslc.com"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/glslc.exe"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/glslc"
+      - "C:/Qt/6.9.1/msvc2022_64/glslc.com"
+      - "C:/Qt/6.9.1/msvc2022_64/glslc.exe"
+      - "C:/Qt/6.9.1/msvc2022_64/glslc"
+      - "C:/VulkanSDK/1.4.321.1/bin/glslc.com"
+    found: "C:/VulkanSDK/1.4.321.1/Bin/glslc.exe"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake:410 (find_program)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:43 (include)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:137 (find_dependency)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6/Qt6Config.cmake:218 (find_package)"
+      - "CMakeLists.txt:27 (find_package)"
+    mode: "program"
+    variable: "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslangValidator"
+    candidate_directories:
+      - "C:/Qt/6.9.1/msvc2022_64/bin/"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/"
+      - "C:/Qt/6.9.1/msvc2022_64/"
+      - "C:/VulkanSDK/1.4.321.1/bin/"
+      - "C:/VulkanSDK/1.4.321.1/Bin/"
+      - "C:/Users/andre/AppData/Local/Programs/cursor/resources/app/bin/"
+      - "C:/Program Files/Google/Chrome/Application/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "C:/Users/andre/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/andre/.dotnet/tools/"
+      - "C:/Users/andre/AppData/Roaming/npm/"
+      - "C:/Program Files/JetBrains/JetBrains Rider 2023.3.6/bin/"
+      - "C:/Users/andre/Downloads/ffmpeg-2025-04-17-git-7684243fbe-full_build/ffmpeg-2025-04-17-git-7684/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/andre/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/andre/.cargo/bin/"
+      - "C:/Users/andre/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/andre/Downloads/ffmpeg-2025-04-17-git-7684243fbe-full_build/ffmpeg-2025-04-17-git-7684243fbe-full_build/bin/"
+      - "C:/Users/andre/Downloads/colmap-x64-windows-cuda/"
+      - "C:/Users/andre/Downloads/colmap-x64-windows-cuda/bin/"
+      - "C:/platform-tools-latest-windows/platform-tools/"
+      - "C:/Users/andre/.aftman/shims/"
+      - "C:/Users/andre/AppData/Local/Microsoft/WinGet/Packages/jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+      - "C:/Qt/"
+      - "C:/Qt/6.9.1/msvc2022_64/bin/"
+      - "C:/Qt/6.9.1/msvc2022_64/lib/"
+      - "C:/Users/andre/.cursor/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/AdvancedImageEditor/bin/"
+      - "C:/Program Files/AdvancedImageEditor/sbin/"
+      - "C:/Program Files/AdvancedImageEditor/"
+    searched_directories:
+      - "C:/Qt/6.9.1/msvc2022_64/bin/glslangValidator.com"
+      - "C:/Qt/6.9.1/msvc2022_64/bin/glslangValidator.exe"
+      - "C:/Qt/6.9.1/msvc2022_64/bin/glslangValidator"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/glslangValidator.com"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/glslangValidator.exe"
+      - "C:/Qt/6.9.1/msvc2022_64/sbin/glslangValidator"
+      - "C:/Qt/6.9.1/msvc2022_64/glslangValidator.com"
+      - "C:/Qt/6.9.1/msvc2022_64/glslangValidator.exe"
+      - "C:/Qt/6.9.1/msvc2022_64/glslangValidator"
+      - "C:/VulkanSDK/1.4.321.1/bin/glslangValidator.com"
+    found: "C:/VulkanSDK/1.4.321.1/Bin/glslangValidator.exe"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "C:/Qt/6.9.1/msvc2022_64"
+      ENV{PATH}:
+        - "C:\\VulkanSDK\\1.4.321.1\\Bin"
+        - "c:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Google\\Chrome\\Application"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\andre\\.cargo\\bin"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\andre\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.3.6\\bin"
+        - "C:\\Users\\andre\\Downloads\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\ffmpeg-2025-04-17-git-7684243fbe-full_build\\bin"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda"
+        - "C:\\Users\\andre\\Downloads\\colmap-x64-windows-cuda\\bin"
+        - "C:\\platform-tools-latest-windows\\platform-tools"
+        - "C:\\Users\\andre\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin"
+        - "C:\\Users\\andre\\.aftman\\shims"
+        - "C:\\Users\\andre\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe"
+        - "C:\\Users\\andre\\.dotnet\\tools"
+        - "C:\\Qt"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\bin"
+        - "C:\\Qt\\6.9.1\\msvc2022_64\\lib"
+        - "c:\\Users\\andre\\.cursor\\extensions\\ms-python.debugpy-2025.10.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/AdvancedImageEditor"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/AdvancedImageEditor"
+...

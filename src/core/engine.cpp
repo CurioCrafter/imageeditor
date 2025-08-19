@@ -2,7 +2,7 @@
 #include "engine.h"
 #include "document.h"
 #include "brush_engine.h"
-#include <iostream>
+#include <QDebug>
 
 namespace core {
 
@@ -26,10 +26,10 @@ bool Engine::initialize()
         // Create a default document
         m_currentDocument = createNewDocument("Untitled");
         
-        std::cout << "Engine initialized successfully" << std::endl;
+        qDebug() << "Engine initialized successfully";
         return true;
     } catch (const std::exception& e) {
-        std::cerr << "Failed to initialize engine: " << e.what() << std::endl;
+        qCritical() << "Failed to initialize engine:" << e.what();
         return false;
     }
 }
@@ -43,7 +43,7 @@ void Engine::shutdown()
     
     m_currentDocument.reset();
     
-    std::cout << "Engine shutdown complete" << std::endl;
+            qDebug() << "Engine shutdown complete";
 }
 
 std::shared_ptr<Document> Engine::createNewDocument(const std::string& name)
@@ -51,10 +51,10 @@ std::shared_ptr<Document> Engine::createNewDocument(const std::string& name)
     try {
         auto document = std::make_shared<Document>(name);
         m_currentDocument = document;
-        std::cout << "Created new document: " << name << std::endl;
+        qDebug() << "Created new document:" << QString::fromStdString(name);
         return document;
     } catch (const std::exception& e) {
-        std::cerr << "Failed to create document: " << e.what() << std::endl;
+        qCritical() << "Failed to create document:" << e.what();
         return nullptr;
     }
 }
@@ -62,20 +62,20 @@ std::shared_ptr<Document> Engine::createNewDocument(const std::string& name)
 bool Engine::saveDocument(const std::string& filename)
 {
     if (!m_currentDocument) {
-        std::cerr << "No document to save" << std::endl;
+        qWarning() << "No document to save";
         return false;
     }
     
     try {
         bool success = m_currentDocument->saveToFile(filename);
         if (success) {
-            std::cout << "Document saved to: " << filename << std::endl;
+            qDebug() << "Document saved to:" << QString::fromStdString(filename);
         } else {
-            std::cerr << "Failed to save document" << std::endl;
+            qWarning() << "Failed to save document";
         }
         return success;
     } catch (const std::exception& e) {
-        std::cerr << "Exception while saving document: " << e.what() << std::endl;
+        qCritical() << "Exception while saving document:" << e.what();
         return false;
     }
 }
@@ -87,13 +87,13 @@ bool Engine::loadDocument(const std::string& filename)
         bool success = document->loadFromFile(filename);
         if (success) {
             m_currentDocument = document;
-            std::cout << "Document loaded from: " << filename << std::endl;
+            qDebug() << "Document loaded from:" << QString::fromStdString(filename);
         } else {
-            std::cerr << "Failed to load document" << std::endl;
+            qWarning() << "Failed to load document";
         }
         return success;
     } catch (const std::exception& e) {
-        std::cerr << "Exception while loading document: " << e.what() << std::endl;
+        qCritical() << "Exception while loading document:" << e.what();
         return false;
     }
 }
@@ -101,7 +101,7 @@ bool Engine::loadDocument(const std::string& filename)
 void Engine::closeCurrentDocument()
 {
     if (m_currentDocument) {
-        std::cout << "Closing document: " << m_currentDocument->getName() << std::endl;
+        qDebug() << "Closing document:" << m_currentDocument->getName();
         m_currentDocument.reset();
     }
 }

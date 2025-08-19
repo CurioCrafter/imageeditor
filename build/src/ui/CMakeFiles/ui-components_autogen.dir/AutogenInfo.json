@@ -25,6 +25,12 @@
 			null
 		],
 		[
+			"C:/Users/andre/Desktop/NewProject/src/ui/canvas_widget.h",
+			"MU",
+			"EWIEGA46WW/moc_canvas_widget.cpp",
+			null
+		],
+		[
 			"C:/Users/andre/Desktop/NewProject/src/ui/color_panel.h",
 			"MU",
 			"EWIEGA46WW/moc_color_panel.cpp",
@@ -63,8 +69,12 @@
 	"MOC_DEFINITIONS" : [],
 	"MOC_DEFINITIONS_Debug" : 
 	[
+		"QT_CONCURRENT_LIB",
 		"QT_CORE_LIB",
+		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
+		"QT_OPENGLWIDGETS_LIB",
+		"QT_OPENGL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -75,9 +85,13 @@
 	],
 	"MOC_DEFINITIONS_MinSizeRel" : 
 	[
+		"QT_CONCURRENT_LIB",
 		"QT_CORE_LIB",
+		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
 		"QT_NO_DEBUG",
+		"QT_OPENGLWIDGETS_LIB",
+		"QT_OPENGL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -88,9 +102,13 @@
 	],
 	"MOC_DEFINITIONS_RelWithDebInfo" : 
 	[
+		"QT_CONCURRENT_LIB",
 		"QT_CORE_LIB",
+		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
 		"QT_NO_DEBUG",
+		"QT_OPENGLWIDGETS_LIB",
+		"QT_OPENGL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -101,9 +119,13 @@
 	],
 	"MOC_DEFINITIONS_Release" : 
 	[
+		"QT_CONCURRENT_LIB",
 		"QT_CORE_LIB",
+		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
 		"QT_NO_DEBUG",
+		"QT_OPENGLWIDGETS_LIB",
+		"QT_OPENGL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -128,8 +150,12 @@
 		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
+		"C:/VulkanSDK/1.4.321.1/Include",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent"
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
@@ -139,8 +165,12 @@
 		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
+		"C:/VulkanSDK/1.4.321.1/Include",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent"
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
@@ -150,8 +180,12 @@
 		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
+		"C:/VulkanSDK/1.4.321.1/Include",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent"
 	],
 	"MOC_INCLUDES_Release" : 
 	[
@@ -161,8 +195,12 @@
 		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
+		"C:/VulkanSDK/1.4.321.1/Include",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -212,6 +250,11 @@
 		],
 		[
 			"C:/Users/andre/Desktop/NewProject/src/ui/canvas_view.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/andre/Desktop/NewProject/src/ui/canvas_widget.cpp",
 			"MU",
 			null
 		],

@@ -79,7 +79,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -97,16 +97,16 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -137,7 +137,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -154,18 +154,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -196,7 +196,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -213,18 +213,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -255,7 +255,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -273,16 +273,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -375,6 +375,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\main_window.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\canvas_view.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\canvas_widget.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\layer_panel.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\tool_panel.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\color_panel.cpp" />
