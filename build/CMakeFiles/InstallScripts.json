@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/andre/Desktop/NewProject/build/cmake_install.cmake",
+		"C:/Users/andre/Desktop/NewProject/build/src/core/cmake_install.cmake",
+		"C:/Users/andre/Desktop/NewProject/build/src/ui/cmake_install.cmake",
+		"C:/Users/andre/Desktop/NewProject/build/src/tools/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

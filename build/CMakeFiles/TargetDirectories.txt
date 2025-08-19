@@ -1,0 +1,6 @@
+C:/Users/andre/Desktop/NewProject/build/CMakeFiles/image-editor.dir
+C:/Users/andre/Desktop/NewProject/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/andre/Desktop/NewProject/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/andre/Desktop/NewProject/build/src/core/CMakeFiles/core-engine.dir
+C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/ui-components.dir
+C:/Users/andre/Desktop/NewProject/build/src/tools/CMakeFiles/tools.dir

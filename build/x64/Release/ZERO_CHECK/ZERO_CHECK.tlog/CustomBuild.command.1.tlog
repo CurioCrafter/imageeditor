@@ -1,0 +1,10 @@
+^C:\USERS\ANDRE\DESKTOP\NEWPROJECT\BUILD\CMAKEFILES\B948CF0BAB8F0A8CCF29E8B97D681317\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/andre/Desktop/NewProject/build/AdvancedImageEditor.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
