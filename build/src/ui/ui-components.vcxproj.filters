@@ -4,19 +4,10 @@
     <ClCompile Include="C:\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files\Generated</Filter>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\ui\main_window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\NewProject\src\ui\main_window_vulkan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\ui\canvas_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\NewProject\src\ui\canvas_widget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\NewProject\src\ui\layer_panel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\NewProject\src\ui\tool_panel.cpp">
@@ -39,19 +30,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\NewProject\src\ui\main_window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="C:\NewProject\src\ui\main_window_vulkan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\NewProject\src\ui\canvas_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="C:\NewProject\src\ui\canvas_widget.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\ui\layer_panel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\NewProject\src\ui\tool_panel.h">

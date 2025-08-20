@@ -369,16 +369,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\ui\main_window.cpp" />
-    <ClInclude Include="C:\NewProject\src\ui\main_window.h" />
     <ClCompile Include="C:\NewProject\src\ui\main_window_vulkan.cpp" />
     <ClInclude Include="C:\NewProject\src\ui\main_window_vulkan.h" />
-    <ClCompile Include="C:\NewProject\src\ui\canvas_view.cpp" />
-    <ClInclude Include="C:\NewProject\src\ui\canvas_view.h" />
     <ClCompile Include="C:\NewProject\src\ui\canvas_widget.cpp" />
     <ClInclude Include="C:\NewProject\src\ui\canvas_widget.h" />
-    <ClCompile Include="C:\NewProject\src\ui\layer_panel.cpp" />
-    <ClInclude Include="C:\NewProject\src\ui\layer_panel.h" />
     <ClCompile Include="C:\NewProject\src\ui\tool_panel.cpp" />
     <ClInclude Include="C:\NewProject\src\ui\tool_panel.h" />
     <ClCompile Include="C:\NewProject\src\ui\color_panel.cpp" />

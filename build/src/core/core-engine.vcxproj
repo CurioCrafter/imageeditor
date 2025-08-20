@@ -79,7 +79,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Debug;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -97,16 +97,16 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Debug;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Debug;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Debug;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Debug;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,7 +115,7 @@
     </Midl>
     <PreBuildEvent>
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target core-engine</Message>
+      <Message>Automatic MOC for target core-engine</Message>
       <Command>setlocal
 cd C:\NewProject\build\src\core
 if %errorlevel% neq 0 goto :cmEnd
@@ -137,7 +137,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Release;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -154,18 +154,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Release;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Release;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Release;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_Release;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -174,7 +174,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </Midl>
     <PreBuildEvent>
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target core-engine</Message>
+      <Message>Automatic MOC for target core-engine</Message>
       <Command>setlocal
 cd C:\NewProject\build\src\core
 if %errorlevel% neq 0 goto :cmEnd
@@ -196,7 +196,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_MinSizeRel;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -213,18 +213,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_MinSizeRel;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_MinSizeRel;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_MinSizeRel;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_MinSizeRel;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -233,7 +233,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </Midl>
     <PreBuildEvent>
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target core-engine</Message>
+      <Message>Automatic MOC for target core-engine</Message>
       <Command>setlocal
 cd C:\NewProject\build\src\core
 if %errorlevel% neq 0 goto :cmEnd
@@ -255,7 +255,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_RelWithDebInfo;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -273,16 +273,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_RelWithDebInfo;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_RelWithDebInfo;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_RelWithDebInfo;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\core\core-engine_autogen\include_RelWithDebInfo;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -291,7 +291,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </Midl>
     <PreBuildEvent>
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target core-engine</Message>
+      <Message>Automatic MOC for target core-engine</Message>
       <Command>setlocal
 cd C:\NewProject\build\src\core
 if %errorlevel% neq 0 goto :cmEnd
@@ -373,11 +373,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\core\engine.cpp" />
-    <ClCompile Include="C:\NewProject\src\core\layer.cpp" />
-    <ClCompile Include="C:\NewProject\src\core\document.cpp" />
     <ClCompile Include="C:\NewProject\src\core\brush_engine.cpp" />
+    <ClCompile Include="C:\NewProject\src\core\engine.cpp" />
     <ClCompile Include="C:\NewProject\src\core\tool.cpp" />
+    <ClInclude Include="C:\NewProject\src\core\brush_engine.h" />
+    <ClInclude Include="C:\NewProject\src\core\engine.h" />
+    <ClInclude Include="C:\NewProject\src\core\filter.h" />
+    <ClInclude Include="C:\NewProject\src\core\tool.h" />
     <ClCompile Include="C:\NewProject\build\src\core\core-engine_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>

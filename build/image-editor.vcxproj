@@ -139,7 +139,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>lib\Debug\ui-components.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgetsd.lib;lib\Debug\gpu-acceleration.lib;lib\Debug\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Guid.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Cored.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\Debug\ui-components.lib;lib\Debug\gpu-acceleration.lib;lib\Debug\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgetsd.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Guid.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Cored.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -212,7 +212,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>lib\Release\ui-components.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgets.lib;lib\Release\gpu-acceleration.lib;lib\Release\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Gui.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Core.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\Release\ui-components.lib;lib\Release\gpu-acceleration.lib;lib\Release\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgets.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Gui.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Core.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -285,7 +285,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>lib\MinSizeRel\ui-components.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgets.lib;lib\MinSizeRel\gpu-acceleration.lib;lib\MinSizeRel\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Gui.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Core.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\MinSizeRel\ui-components.lib;lib\MinSizeRel\gpu-acceleration.lib;lib\MinSizeRel\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgets.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Gui.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Core.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -357,7 +357,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
-      <AdditionalDependencies>lib\RelWithDebInfo\ui-components.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgets.lib;lib\RelWithDebInfo\gpu-acceleration.lib;lib\RelWithDebInfo\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Gui.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Core.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>lib\RelWithDebInfo\ui-components.lib;lib\RelWithDebInfo\gpu-acceleration.lib;lib\RelWithDebInfo\core-engine.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Widgets.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Gui.lib;C:\Qt\6.9.1\msvc2022_64\lib\Qt6Core.lib;mpr.lib;userenv.lib;d3d11.lib;dxgi.lib;dxguid.lib;d3d12.lib;C:\VulkanSDK\1.4.321.1\Lib\vulkan-1.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>

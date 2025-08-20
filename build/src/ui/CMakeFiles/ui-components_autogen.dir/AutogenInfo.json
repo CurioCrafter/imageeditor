@@ -25,12 +25,6 @@
 			null
 		],
 		[
-			"C:/NewProject/src/ui/canvas_view.h",
-			"MU",
-			"EWIEGA46WW/moc_canvas_view.cpp",
-			null
-		],
-		[
 			"C:/NewProject/src/ui/canvas_widget.h",
 			"MU",
 			"EWIEGA46WW/moc_canvas_widget.cpp",
@@ -40,18 +34,6 @@
 			"C:/NewProject/src/ui/color_panel.h",
 			"MU",
 			"EWIEGA46WW/moc_color_panel.cpp",
-			null
-		],
-		[
-			"C:/NewProject/src/ui/layer_panel.h",
-			"MU",
-			"EWIEGA46WW/moc_layer_panel.cpp",
-			null
-		],
-		[
-			"C:/NewProject/src/ui/main_window.h",
-			"MU",
-			"EWIEGA46WW/moc_main_window.cpp",
 			null
 		],
 		[
@@ -256,11 +238,8 @@
 	"SOURCES" : 
 	[
 		[ "C:/NewProject/src/ui/brush_panel.cpp", "MU", null ],
-		[ "C:/NewProject/src/ui/canvas_view.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/canvas_widget.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/color_panel.cpp", "MU", null ],
-		[ "C:/NewProject/src/ui/layer_panel.cpp", "MU", null ],
-		[ "C:/NewProject/src/ui/main_window.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/main_window_vulkan.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/tool_panel.cpp", "MU", null ]
 	],
