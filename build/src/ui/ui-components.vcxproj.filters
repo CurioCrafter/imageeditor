@@ -10,6 +10,9 @@
     <ClCompile Include="C:\NewProject\src\ui\canvas_widget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\NewProject\src\ui\layer_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\NewProject\src\ui\tool_panel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,6 +37,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\NewProject\src\ui\canvas_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\NewProject\src\ui\layer_widget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\NewProject\src\ui\tool_panel.h">

@@ -37,6 +37,12 @@
 			null
 		],
 		[
+			"C:/NewProject/src/ui/layer_widget.h",
+			"MU",
+			"EWIEGA46WW/moc_layer_widget.cpp",
+			null
+		],
+		[
 			"C:/NewProject/src/ui/main_window_vulkan.h",
 			"MU",
 			"EWIEGA46WW/moc_main_window_vulkan.cpp",
@@ -240,6 +246,7 @@
 		[ "C:/NewProject/src/ui/brush_panel.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/canvas_widget.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/color_panel.cpp", "MU", null ],
+		[ "C:/NewProject/src/ui/layer_widget.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/main_window_vulkan.cpp", "MU", null ],
 		[ "C:/NewProject/src/ui/tool_panel.cpp", "MU", null ]
 	],

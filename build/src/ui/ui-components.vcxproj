@@ -373,6 +373,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\NewProject\src\ui\main_window_vulkan.h" />
     <ClCompile Include="C:\NewProject\src\ui\canvas_widget.cpp" />
     <ClInclude Include="C:\NewProject\src\ui\canvas_widget.h" />
+    <ClCompile Include="C:\NewProject\src\ui\layer_widget.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\layer_widget.h" />
     <ClCompile Include="C:\NewProject\src\ui\tool_panel.cpp" />
     <ClInclude Include="C:\NewProject\src\ui\tool_panel.h" />
     <ClCompile Include="C:\NewProject\src\ui\color_panel.cpp" />
