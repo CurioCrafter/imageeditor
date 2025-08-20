@@ -48,6 +48,15 @@ if(BUILD_GPU)
     
     # Link core engine
     target_link_libraries(gpu-acceleration core-engine)
+    
+    # Add Vulkan/MSVC compatibility definitions for Windows
+    if(WIN32)
+        target_compile_definitions(gpu-acceleration PRIVATE
+            VK_USE_PLATFORM_WIN32_KHR
+            WIN32_LEAN_AND_MEAN
+            NOMINMAX
+        )
+    endif()
 else()
     # Create empty library if GPU is disabled
     add_library(gpu-acceleration INTERFACE)

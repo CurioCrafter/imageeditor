@@ -44,17 +44,16 @@ template <> constexpr inline auto core::Document::qt_create_metaobjectdata<qt_me
         "index",
         "layerRemoved",
         "layerMoved",
-        "fromIndex",
-        "toIndex",
+        "from",
+        "to",
         "layerChanged",
         "activeLayerChanged",
+        "sizeChanged",
+        "size",
         "documentSizeChanged",
-        "newSize",
-        "documentModified",
-        "renderQualityChanged",
-        "RenderQuality",
-        "quality",
-        "undoStackChanged"
+        "modifiedChanged",
+        "modified",
+        "documentChanged"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -78,18 +77,20 @@ template <> constexpr inline auto core::Document::qt_create_metaobjectdata<qt_me
         QtMocHelpers::SignalData<void(int)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Int, 3 },
         }}),
-        // Signal 'documentSizeChanged'
+        // Signal 'sizeChanged'
         QtMocHelpers::SignalData<void(const QSize &)>(10, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QSize, 11 },
         }}),
-        // Signal 'documentModified'
-        QtMocHelpers::SignalData<void()>(12, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'renderQualityChanged'
-        QtMocHelpers::SignalData<void(RenderQuality)>(13, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { 0x80000000 | 14, 15 },
+        // Signal 'documentSizeChanged'
+        QtMocHelpers::SignalData<void(const QSize &)>(12, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QSize, 11 },
         }}),
-        // Signal 'undoStackChanged'
-        QtMocHelpers::SignalData<void()>(16, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'modifiedChanged'
+        QtMocHelpers::SignalData<void(bool)>(13, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Bool, 14 },
+        }}),
+        // Signal 'documentChanged'
+        QtMocHelpers::SignalData<void()>(15, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -118,10 +119,10 @@ void core::Document::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 2: _t->layerMoved((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         case 3: _t->layerChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 4: _t->activeLayerChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 5: _t->documentSizeChanged((*reinterpret_cast< std::add_pointer_t<QSize>>(_a[1]))); break;
-        case 6: _t->documentModified(); break;
-        case 7: _t->renderQualityChanged((*reinterpret_cast< std::add_pointer_t<RenderQuality>>(_a[1]))); break;
-        case 8: _t->undoStackChanged(); break;
+        case 5: _t->sizeChanged((*reinterpret_cast< std::add_pointer_t<QSize>>(_a[1]))); break;
+        case 6: _t->documentSizeChanged((*reinterpret_cast< std::add_pointer_t<QSize>>(_a[1]))); break;
+        case 7: _t->modifiedChanged((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 8: _t->documentChanged(); break;
         default: ;
         }
     }
@@ -136,13 +137,13 @@ void core::Document::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
             return;
         if (QtMocHelpers::indexOfMethod<void (Document::*)(int )>(_a, &Document::activeLayerChanged, 4))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Document::*)(const QSize & )>(_a, &Document::documentSizeChanged, 5))
+        if (QtMocHelpers::indexOfMethod<void (Document::*)(const QSize & )>(_a, &Document::sizeChanged, 5))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Document::*)()>(_a, &Document::documentModified, 6))
+        if (QtMocHelpers::indexOfMethod<void (Document::*)(const QSize & )>(_a, &Document::documentSizeChanged, 6))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Document::*)(RenderQuality )>(_a, &Document::renderQualityChanged, 7))
+        if (QtMocHelpers::indexOfMethod<void (Document::*)(bool )>(_a, &Document::modifiedChanged, 7))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Document::*)()>(_a, &Document::undoStackChanged, 8))
+        if (QtMocHelpers::indexOfMethod<void (Document::*)()>(_a, &Document::documentChanged, 8))
             return;
     }
 }
@@ -209,25 +210,25 @@ void core::Document::activeLayerChanged(int _t1)
 }
 
 // SIGNAL 5
-void core::Document::documentSizeChanged(const QSize & _t1)
+void core::Document::sizeChanged(const QSize & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 5, nullptr, _t1);
 }
 
 // SIGNAL 6
-void core::Document::documentModified()
+void core::Document::documentSizeChanged(const QSize & _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 6, nullptr, _t1);
 }
 
 // SIGNAL 7
-void core::Document::renderQualityChanged(RenderQuality _t1)
+void core::Document::modifiedChanged(bool _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 7, nullptr, _t1);
 }
 
 // SIGNAL 8
-void core::Document::undoStackChanged()
+void core::Document::documentChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 8, nullptr);
 }

@@ -10,7 +10,13 @@
 #include <QString>
 #include <QSize>
 #include <QImage>
-#include <QWidget>
+#include <QColor>
+#include <QFont>
+#include <memory>
+#include <vector>
+
+// Forward declaration
+class QWidget;
 
 namespace core {
 

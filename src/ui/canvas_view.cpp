@@ -60,7 +60,7 @@ void CanvasView::setDocument(core::Document* document)
     if (m_document) {
         // Update scene size based on document
         auto coreSize = m_document->getSize();
-        QSize docSize(coreSize.width, coreSize.height);
+        QSize docSize(coreSize.width(), coreSize.height());
         m_scene->setSceneRect(0, 0, docSize.width(), docSize.height());
         fitToView();
     }

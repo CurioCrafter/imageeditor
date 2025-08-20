@@ -143,7 +143,9 @@ C:/Users/andre/Desktop/NewProject/build/src/core/core-engine_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QColor \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QCursor \
+  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QFont \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QImage \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QKeyEvent \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QMouseEvent \

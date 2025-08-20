@@ -1,4 +1,6 @@
 #include "canvas_widget.h"
+#include "../core/document.h"
+#include "../core/tool.h"
 #include <QOpenGLFramebufferObject>
 #include <QOpenGLPaintDevice>
 #include <QPainter>

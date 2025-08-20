@@ -1,7 +1,7 @@
 #include "layer.h"
+#include <QDebug>
 #include <QPainter>
 #include <QDateTime>
-#include <QDebug>
 
 namespace core {
 
@@ -19,20 +19,23 @@ Layer::Layer(const QString& name, QObject* parent)
     , m_transform()
     , m_parent(nullptr)
     , m_createdDate(QDateTime::currentDateTime())
-    , m_modifiedDate(QDateTime::currentDateTime())
+    , m_modifiedDate(m_createdDate)
 {
 }
 
 Layer::~Layer() = default;
 
-void Layer::setName(const QString& name) {
+void Layer::setName(const QString& name)
+{
     if (m_name != name) {
         m_name = name;
+        emit propertyChanged();
         onPropertyChanged();
     }
 }
 
-void Layer::setVisible(bool visible) {
+void Layer::setVisible(bool visible)
+{
     if (m_visible != visible) {
         m_visible = visible;
         emit visibilityChanged(visible);
@@ -40,23 +43,25 @@ void Layer::setVisible(bool visible) {
     }
 }
 
-void Layer::setLocked(bool locked) {
+void Layer::setLocked(bool locked)
+{
     if (m_locked != locked) {
         m_locked = locked;
         onPropertyChanged();
     }
 }
 
-void Layer::setOpacity(float opacity) {
-    opacity = std::clamp(opacity, 0.0f, 1.0f);
-    if (!qFuzzyCompare(m_opacity, opacity)) {
+void Layer::setOpacity(float opacity)
+{
+    if (m_opacity != opacity) {
         m_opacity = opacity;
         emit opacityChanged(opacity);
         onPropertyChanged();
     }
 }
 
-void Layer::setBlendMode(BlendMode mode) {
+void Layer::setBlendMode(BlendMode mode)
+{
     if (m_blendMode != mode) {
         m_blendMode = mode;
         emit blendModeChanged(mode);
@@ -64,22 +69,27 @@ void Layer::setBlendMode(BlendMode mode) {
     }
 }
 
-void Layer::addChild(std::shared_ptr<Layer> child) {
-    if (child && child != shared_from_this()) {
+void Layer::addChild(std::shared_ptr<Layer> child)
+{
+    if (child && child.get() != this) {
         child->setParent(this);
         m_children.push_back(child);
+        onPropertyChanged();
     }
 }
 
-void Layer::removeChild(std::shared_ptr<Layer> child) {
+void Layer::removeChild(std::shared_ptr<Layer> child)
+{
     auto it = std::find(m_children.begin(), m_children.end(), child);
     if (it != m_children.end()) {
         (*it)->setParent(nullptr);
         m_children.erase(it);
+        onPropertyChanged();
     }
 }
 
-void Layer::setPosition(const QPointF& pos) {
+void Layer::setPosition(const QPointF& pos)
+{
     if (m_position != pos) {
         m_position = pos;
         emit positionChanged(pos);
@@ -87,7 +97,8 @@ void Layer::setPosition(const QPointF& pos) {
     }
 }
 
-void Layer::setSize(const QSize& size) {
+void Layer::setSize(const QSize& size)
+{
     if (m_size != size) {
         m_size = size;
         emit sizeChanged(size);
@@ -95,7 +106,8 @@ void Layer::setSize(const QSize& size) {
     }
 }
 
-void Layer::setTransform(const QTransform& transform) {
+void Layer::setTransform(const QTransform& transform)
+{
     if (m_transform != transform) {
         m_transform = transform;
         emit transformChanged(transform);
@@ -103,348 +115,372 @@ void Layer::setTransform(const QTransform& transform) {
     }
 }
 
-void Layer::setMask(const LayerMask& mask) {
+void Layer::setMask(const LayerMask& mask)
+{
     m_mask = mask;
     emit maskChanged();
     onPropertyChanged();
 }
 
-void Layer::enableMask(bool enable) {
-    if (m_mask.enabled != enable) {
-        m_mask.enabled = enable;
-        emit maskChanged();
-        onPropertyChanged();
-    }
+void Layer::enableMask(bool enable)
+{
+    m_mask.enabled = enable;
+    emit maskChanged();
+    onPropertyChanged();
 }
 
-void Layer::linkMask(bool link) {
-    if (m_mask.linked != link) {
-        m_mask.linked = link;
-        emit maskChanged();
-        onPropertyChanged();
-    }
+void Layer::linkMask(bool link)
+{
+    m_mask.linked = link;
+    emit maskChanged();
+    onPropertyChanged();
 }
 
-void Layer::setEffects(const LayerEffects& effects) {
+void Layer::setEffects(const LayerEffects& effects)
+{
     m_effects = effects;
     emit effectsChanged();
     onPropertyChanged();
 }
 
-void Layer::duplicate() {
-    // Default implementation creates a shallow copy
-    // Derived classes should override this for proper duplication
+void Layer::duplicate()
+{
+    // TODO: Implement layer duplication
+    qDebug() << "Layer duplication not yet implemented";
 }
 
-void Layer::merge(const std::vector<std::shared_ptr<Layer>>& layers) {
-    // Default implementation does nothing
-    // Derived classes should override this for proper merging
+void Layer::merge(const std::vector<std::shared_ptr<Layer>>& layers)
+{
     Q_UNUSED(layers)
+    // TODO: Implement layer merging
+    qDebug() << "Layer merging not yet implemented";
 }
 
-void Layer::rasterize() {
-    // Default implementation does nothing
-    // Derived classes should override this for proper rasterization
+void Layer::rasterize()
+{
+    // TODO: Implement layer rasterization
+    qDebug() << "Layer rasterization not yet implemented";
 }
 
-QRectF Layer::getBounds() const {
+QRectF Layer::getBounds() const
+{
     return QRectF(m_position, m_size);
 }
 
-bool Layer::contains(const QPointF& point) const {
+bool Layer::contains(const QPointF& point) const
+{
     return getBounds().contains(point);
 }
 
-bool Layer::intersects(const QRectF& rect) const {
+bool Layer::intersects(const QRectF& rect) const
+{
     return getBounds().intersects(rect);
 }
 
-void Layer::updateModifiedDate() {
+void Layer::updateModifiedDate()
+{
     m_modifiedDate = QDateTime::currentDateTime();
 }
 
-void Layer::onPropertyChanged() {
-    emit propertyChanged();
+void Layer::onPropertyChanged()
+{
     updateModifiedDate();
     notifyParentOfChange();
 }
 
-void Layer::notifyParentOfChange() {
+void Layer::notifyParentOfChange()
+{
     if (m_parent) {
         m_parent->onPropertyChanged();
     }
 }
 
-// Raster layer implementation
+// RasterLayer implementation
 RasterLayer::RasterLayer(int width, int height, const QColor& fillColor, QObject* parent)
     : Layer("Raster Layer", parent)
-    , m_image(width, height, QImage::Format_ARGB32_Premultiplied)
-    , m_originalImage(width, height, QImage::Format_ARGB32_Premultiplied)
-    , m_selection()
-    , m_clipboard()
 {
     m_type = LayerType::Raster;
     m_size = QSize(width, height);
+    m_image = QImage(width, height, QImage::Format_ARGB32_Premultiplied);
     m_image.fill(fillColor);
     m_originalImage = m_image;
 }
 
 RasterLayer::RasterLayer(const QImage& image, QObject* parent)
     : Layer("Raster Layer", parent)
-    , m_image(image)
-    , m_originalImage(image)
-    , m_selection()
-    , m_clipboard()
 {
     m_type = LayerType::Raster;
+    m_image = image;
     m_size = image.size();
+    m_originalImage = image;
 }
 
-void RasterLayer::setImage(const QImage& image) {
+
+
+void RasterLayer::setImage(const QImage& image)
+{
     m_image = image;
     m_size = image.size();
     updateImageBounds();
     onPropertyChanged();
 }
 
-QColor RasterLayer::getPixel(int x, int y) const {
+QColor RasterLayer::getPixel(int x, int y) const
+{
     if (m_image.valid(x, y)) {
         return m_image.pixelColor(x, y);
     }
     return QColor();
 }
 
-void RasterLayer::setPixel(int x, int y, const QColor& color) {
+void RasterLayer::setPixel(int x, int y, const QColor& color)
+{
     if (m_image.valid(x, y)) {
         m_image.setPixelColor(x, y, color);
         onPropertyChanged();
     }
 }
 
-void RasterLayer::fill(const QColor& color) {
+void RasterLayer::fill(const QColor& color)
+{
     m_image.fill(color);
     onPropertyChanged();
 }
 
-void RasterLayer::clear() {
+void RasterLayer::clear()
+{
     m_image.fill(Qt::transparent);
     onPropertyChanged();
 }
 
-QImage RasterLayer::render(const QSize& size) {
+QImage RasterLayer::render(const QSize& size)
+{
     Q_UNUSED(size)
     return m_image;
 }
 
-void RasterLayer::render(QPainter* painter, const QRect& bounds) {
-    if (!painter) return;
-    
-    painter->save();
-    painter->setOpacity(m_opacity);
-    painter->setTransform(m_transform);
-    painter->translate(m_position);
-    
-    // Apply blend mode (simplified)
-    painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
-    
-    // Draw the image
-    painter->drawImage(0, 0, m_image);
-    
-    painter->restore();
+void RasterLayer::render(QPainter* painter, const QRect& bounds)
+{
+    if (painter) {
+        painter->drawImage(bounds, m_image);
+    }
 }
 
-void RasterLayer::duplicate() {
-    // Create a deep copy of the image
-    auto duplicate = std::make_shared<RasterLayer>(m_image, parent());
-    duplicate->setName(m_name + " Copy");
-    duplicate->setPosition(m_position);
-    duplicate->setOpacity(m_opacity);
-    duplicate->setBlendMode(m_blendMode);
-    duplicate->setVisible(m_visible);
-    duplicate->setLocked(m_locked);
-    
-    // The duplicate should be added to the document by the caller
+void RasterLayer::duplicate()
+{
+    // TODO: Implement raster layer duplication
+    qDebug() << "Raster layer duplication not yet implemented";
 }
 
-void RasterLayer::merge(const std::vector<std::shared_ptr<Layer>>& layers) {
-    // Implementation for merging layers
+void RasterLayer::merge(const std::vector<std::shared_ptr<Layer>>& layers)
+{
     Q_UNUSED(layers)
+    // TODO: Implement raster layer merging
+    qDebug() << "Raster layer merging not yet implemented";
 }
 
-void RasterLayer::rasterize() {
+void RasterLayer::rasterize()
+{
     // Raster layers are already rasterized
+    qDebug() << "Raster layer is already rasterized";
 }
 
-void RasterLayer::applyFilter(Filter* filter) {
-    // Implementation for applying filters
+void RasterLayer::applyFilter(Filter* filter)
+{
     Q_UNUSED(filter)
+    // TODO: Implement filter application
+    qDebug() << "Filter application not yet implemented";
 }
 
-void RasterLayer::adjustBrightnessContrast(float brightness, float contrast) {
-    // Implementation for brightness/contrast adjustment
+void RasterLayer::adjustBrightnessContrast(float brightness, float contrast)
+{
     Q_UNUSED(brightness)
     Q_UNUSED(contrast)
+    // TODO: Implement brightness/contrast adjustment
+    qDebug() << "Brightness/contrast adjustment not yet implemented";
 }
 
-void RasterLayer::adjustHueSaturation(float hue, float saturation, float lightness) {
-    // Implementation for hue/saturation adjustment
+void RasterLayer::adjustHueSaturation(float hue, float saturation, float lightness)
+{
     Q_UNUSED(hue)
     Q_UNUSED(saturation)
     Q_UNUSED(lightness)
+    // TODO: Implement hue/saturation adjustment
+    qDebug() << "Hue/saturation adjustment not yet implemented";
 }
 
-void RasterLayer::adjustLevels(float blackPoint, float whitePoint, float gamma) {
-    // Implementation for levels adjustment
+void RasterLayer::adjustLevels(float blackPoint, float whitePoint, float gamma)
+{
     Q_UNUSED(blackPoint)
     Q_UNUSED(whitePoint)
     Q_UNUSED(gamma)
+    // TODO: Implement levels adjustment
+    qDebug() << "Levels adjustment not yet implemented";
 }
 
-void RasterLayer::selectAll() {
-    m_selection = QRect(0, 0, m_size.width(), m_size.height());
+void RasterLayer::selectAll()
+{
+    m_selection = m_image.rect();
+    onPropertyChanged();
 }
 
-void RasterLayer::clearSelection() {
+void RasterLayer::clearSelection()
+{
     m_selection = QRect();
+    onPropertyChanged();
 }
 
-void RasterLayer::invertSelection() {
-    // Implementation for inverting selection
+void RasterLayer::invertSelection()
+{
+    // TODO: Implement selection inversion
+    qDebug() << "Selection inversion not yet implemented";
 }
 
-void RasterLayer::expandSelection(int pixels) {
-    // Implementation for expanding selection
+void RasterLayer::expandSelection(int pixels)
+{
     Q_UNUSED(pixels)
+    // TODO: Implement selection expansion
+    qDebug() << "Selection expansion not yet implemented";
 }
 
-void RasterLayer::contractSelection(int pixels) {
-    // Implementation for contracting selection
+void RasterLayer::contractSelection(int pixels)
+{
     Q_UNUSED(pixels)
+    // TODO: Implement selection contraction
+    qDebug() << "Selection contraction not yet implemented";
 }
 
-void RasterLayer::copy(const QRect& bounds) {
-    if (bounds.isValid()) {
+void RasterLayer::copy(const QRect& bounds)
+{
+    if (bounds.isValid() && m_image.rect().intersects(bounds)) {
         m_clipboard = m_image.copy(bounds);
     }
 }
 
-void RasterLayer::paste(const QImage& image, const QPoint& position) {
-    if (!image.isNull()) {
-        QPainter painter(&m_image);
-        painter.drawImage(position, image);
-        onPropertyChanged();
-    }
+void RasterLayer::paste(const QImage& image, const QPoint& position)
+{
+    Q_UNUSED(image)
+    Q_UNUSED(position)
+    // TODO: Implement image pasting
+    qDebug() << "Image pasting not yet implemented";
 }
 
-void RasterLayer::cut(const QRect& bounds) {
-    if (bounds.isValid()) {
-        copy(bounds);
-        QPainter painter(&m_image);
-        painter.setCompositionMode(QPainter::CompositionMode_Clear);
-        painter.fillRect(bounds, Qt::transparent);
-        onPropertyChanged();
-    }
+void RasterLayer::cut(const QRect& bounds)
+{
+    copy(bounds);
+    // TODO: Implement cutting (copy + clear selection)
+    qDebug() << "Image cutting not yet implemented";
 }
 
-void RasterLayer::rotate(double angle, const QPointF& center) {
-    QTransform transform;
-    transform.translate(center.x(), center.y());
-    transform.rotate(angle);
-    transform.translate(-center.x(), -center.y());
-    
-    m_image = m_image.transformed(transform, Qt::SmoothTransformation);
-    updateImageBounds();
-    onPropertyChanged();
+void RasterLayer::rotate(double angle, const QPointF& center)
+{
+    Q_UNUSED(angle)
+    Q_UNUSED(center)
+    // TODO: Implement rotation
+    qDebug() << "Image rotation not yet implemented";
 }
 
-void RasterLayer::scale(double factor, const QPointF& center) {
-    QTransform transform;
-    transform.translate(center.x(), center.y());
-    transform.scale(factor, factor);
-    transform.translate(-center.x(), -center.y());
-    
-    m_image = m_image.transformed(transform, Qt::SmoothTransformation);
-    updateImageBounds();
-    onPropertyChanged();
+void RasterLayer::scale(double factor, const QPointF& center)
+{
+    Q_UNUSED(factor)
+    Q_UNUSED(center)
+    // TODO: Implement scaling
+    qDebug() << "Image scaling not yet implemented";
 }
 
-void RasterLayer::flipHorizontal() {
+void RasterLayer::flipHorizontal()
+{
     m_image = m_image.mirrored(true, false);
     onPropertyChanged();
 }
 
-void RasterLayer::flipVertical() {
+void RasterLayer::flipVertical()
+{
     m_image = m_image.mirrored(false, true);
     onPropertyChanged();
 }
 
-void RasterLayer::skew(double horizontal, double vertical) {
-    QTransform transform;
-    transform.shear(horizontal, vertical);
-    
-    m_image = m_image.transformed(transform, Qt::SmoothTransformation);
-    updateImageBounds();
-    onPropertyChanged();
+void RasterLayer::skew(double horizontal, double vertical)
+{
+    Q_UNUSED(horizontal)
+    Q_UNUSED(vertical)
+    // TODO: Implement skewing
+    qDebug() << "Image skewing not yet implemented";
 }
 
-void RasterLayer::updateImageBounds() {
+void RasterLayer::updateImageBounds()
+{
     m_size = m_image.size();
     emit sizeChanged(m_size);
 }
 
-void RasterLayer::applyTransform(const QTransform& transform) {
-    m_image = m_image.transformed(transform, Qt::SmoothTransformation);
-    updateImageBounds();
-    onPropertyChanged();
+void RasterLayer::applyTransform(const QTransform& transform)
+{
+    Q_UNUSED(transform)
+    // TODO: Implement transform application
+    qDebug() << "Transform application not yet implemented";
 }
 
-// Adjustment layer implementation
+// AdjustmentLayer implementation
 AdjustmentLayer::AdjustmentLayer(AdjustmentType type, QObject* parent)
     : Layer("Adjustment Layer", parent)
-    , m_type(type)
+    , m_adjustmentType(type)
 {
     m_type = LayerType::Adjustment;
 }
 
-void AdjustmentLayer::setParameters(const QVariantMap& params) {
+QImage AdjustmentLayer::render(const QSize& size)
+{
+    Q_UNUSED(size)
+    // TODO: Implement adjustment layer rendering
+    return QImage();
+}
+
+void AdjustmentLayer::render(QPainter* painter, const QRect& bounds)
+{
+    Q_UNUSED(painter)
+    Q_UNUSED(bounds)
+    // TODO: Implement adjustment layer rendering
+}
+
+void AdjustmentLayer::duplicate()
+{
+    // TODO: Implement adjustment layer duplication
+    qDebug() << "Adjustment layer duplication not yet implemented";
+}
+
+void AdjustmentLayer::rasterize()
+{
+    // TODO: Implement adjustment layer rasterization
+    qDebug() << "Adjustment layer rasterization not yet implemented";
+}
+
+void AdjustmentLayer::setAdjustmentType(AdjustmentType type)
+{
+    m_adjustmentType = type;
+    onPropertyChanged();
+}
+
+void AdjustmentLayer::setParameters(const QVariantMap& params)
+{
     m_parameters = params;
     onPropertyChanged();
 }
 
-QImage AdjustmentLayer::render(const QSize& size) {
-    Q_UNUSED(size)
-    // Return a placeholder image for adjustment layers
-    return QImage(100, 100, QImage::Format_ARGB32_Premultiplied);
+void AdjustmentLayer::setParameter(const QString& key, const QVariant& value)
+{
+    m_parameters[key] = value;
+    onPropertyChanged();
 }
 
-void AdjustmentLayer::render(QPainter* painter, const QRect& bounds) {
-    Q_UNUSED(painter)
-    Q_UNUSED(bounds)
-    // Adjustment layers don't render directly
-}
-
-void AdjustmentLayer::duplicate() {
-    auto duplicate = std::make_shared<AdjustmentLayer>(m_type, parent());
-    duplicate->setName(m_name + " Copy");
-    duplicate->setParameters(m_parameters);
-    duplicate->setPosition(m_position);
-    duplicate->setOpacity(m_opacity);
-    duplicate->setBlendMode(m_blendMode);
-    duplicate->setVisible(m_visible);
-    duplicate->setLocked(m_locked);
-}
-
-void AdjustmentLayer::rasterize() {
-    // Implementation for rasterizing adjustment layers
-}
-
-QImage AdjustmentLayer::applyAdjustment(const QImage& input) {
-    // Implementation for applying adjustments
+QImage AdjustmentLayer::applyAdjustment(const QImage& input) const
+{
     Q_UNUSED(input)
+    // TODO: Implement adjustment application
     return QImage();
 }
 
-// Text layer implementation
+// TextLayer implementation
 TextLayer::TextLayer(const QString& text, QObject* parent)
     : Layer("Text Layer", parent)
     , m_text(text)
@@ -457,7 +493,34 @@ TextLayer::TextLayer(const QString& text, QObject* parent)
     updateTextBounds();
 }
 
-void TextLayer::setText(const QString& text) {
+QImage TextLayer::render(const QSize& size)
+{
+    Q_UNUSED(size)
+    // TODO: Implement text layer rendering
+    return QImage();
+}
+
+void TextLayer::render(QPainter* painter, const QRect& bounds)
+{
+    Q_UNUSED(painter)
+    Q_UNUSED(bounds)
+    // TODO: Implement text layer rendering
+}
+
+void TextLayer::duplicate()
+{
+    // TODO: Implement text layer duplication
+    qDebug() << "Text layer duplication not yet implemented";
+}
+
+void TextLayer::rasterize()
+{
+    // TODO: Implement text layer rasterization
+    qDebug() << "Text layer rasterization not yet implemented";
+}
+
+void TextLayer::setText(const QString& text)
+{
     if (m_text != text) {
         m_text = text;
         updateTextBounds();
@@ -465,7 +528,8 @@ void TextLayer::setText(const QString& text) {
     }
 }
 
-void TextLayer::setFont(const QFont& font) {
+void TextLayer::setFont(const QFont& font)
+{
     if (m_font != font) {
         m_font = font;
         updateTextBounds();
@@ -473,98 +537,35 @@ void TextLayer::setFont(const QFont& font) {
     }
 }
 
-void TextLayer::setColor(const QColor& color) {
+void TextLayer::setColor(const QColor& color)
+{
     if (m_color != color) {
         m_color = color;
         onPropertyChanged();
     }
 }
 
-void TextLayer::setAlignment(Qt::Alignment alignment) {
+void TextLayer::setAlignment(Qt::Alignment alignment)
+{
     if (m_alignment != alignment) {
         m_alignment = alignment;
-        updateTextBounds();
         onPropertyChanged();
     }
 }
 
-void TextLayer::setLineSpacing(float spacing) {
-    if (!qFuzzyCompare(m_lineSpacing, spacing)) {
+void TextLayer::setLineSpacing(float spacing)
+{
+    if (m_lineSpacing != spacing) {
         m_lineSpacing = spacing;
         updateTextBounds();
         onPropertyChanged();
     }
 }
 
-QImage TextLayer::render(const QSize& size) {
-    Q_UNUSED(size)
-    // Render text to image
-    QImage image(m_size, QImage::Format_ARGB32_Premultiplied);
-    image.fill(Qt::transparent);
-    
-    QPainter painter(&image);
-    painter.setFont(m_font);
-    painter.setPen(m_color);
-    painter.setOpacity(m_opacity);
-    
-    // Draw text with alignment
-    QRect textRect = image.rect();
-    painter.drawText(textRect, m_alignment, m_text);
-    
-    return image;
-}
-
-void TextLayer::render(QPainter* painter, const QRect& bounds) {
-    if (!painter) return;
-    
-    painter->save();
-    painter->setOpacity(m_opacity);
-    painter->setTransform(m_transform);
-    painter->translate(m_position);
-    
-    painter->setFont(m_font);
-    painter->setPen(m_color);
-    
-    // Draw text
-    painter->drawText(bounds, m_alignment, m_text);
-    
-    painter->restore();
-}
-
-void TextLayer::duplicate() {
-    auto duplicate = std::make_shared<TextLayer>(m_text, parent());
-    duplicate->setName(m_name + " Copy");
-    duplicate->setFont(m_font);
-    duplicate->setColor(m_color);
-    duplicate->setAlignment(m_alignment);
-    duplicate->setLineSpacing(m_lineSpacing);
-    duplicate->setPosition(m_position);
-    duplicate->setOpacity(m_opacity);
-    duplicate->setBlendMode(m_blendMode);
-    duplicate->setVisible(m_visible);
-    duplicate->setLocked(m_locked);
-}
-
-void TextLayer::rasterize() {
-    // Convert text layer to raster layer
-    QImage textImage = render();
-    auto rasterLayer = std::make_shared<RasterLayer>(textImage, parent());
-    rasterLayer->setName(m_name + " (Rasterized)");
-    rasterLayer->setPosition(m_position);
-    rasterLayer->setOpacity(m_opacity);
-    rasterLayer->setBlendMode(m_blendMode);
-    rasterLayer->setVisible(m_visible);
-    rasterLayer->setLocked(m_locked);
-    
-    // The rasterized layer should replace this text layer in the document
-}
-
-void TextLayer::updateTextBounds() {
-    // Calculate text bounds based on font and text content
-    QFontMetrics metrics(m_font);
-    QSize textSize = metrics.size(Qt::TextSingleLine, m_text);
-    m_size = textSize;
-    emit sizeChanged(m_size);
+void TextLayer::updateTextBounds()
+{
+    // TODO: Calculate text bounds based on font and text
+    qDebug() << "Text bounds calculation not yet implemented";
 }
 
 } // namespace core

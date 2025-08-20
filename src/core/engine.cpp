@@ -3,6 +3,7 @@
 #include "document.h"
 #include "brush_engine.h"
 #include <QDebug>
+#include <QString>
 
 namespace core {
 
@@ -43,13 +44,15 @@ void Engine::shutdown()
     
     m_currentDocument.reset();
     
-            qDebug() << "Engine shutdown complete";
+    qDebug() << "Engine shutdown complete";
 }
 
 std::shared_ptr<Document> Engine::createNewDocument(const std::string& name)
 {
     try {
-        auto document = std::make_shared<Document>(name);
+        // Convert std::string to QString for Document constructor
+        auto document = std::make_shared<Document>(800, 600);
+        document->setName(QString::fromStdString(name));
         m_currentDocument = document;
         qDebug() << "Created new document:" << QString::fromStdString(name);
         return document;
@@ -67,7 +70,8 @@ bool Engine::saveDocument(const std::string& filename)
     }
     
     try {
-        bool success = m_currentDocument->saveToFile(filename);
+        // Convert std::string to QString
+        bool success = m_currentDocument->saveToFile(QString::fromStdString(filename));
         if (success) {
             qDebug() << "Document saved to:" << QString::fromStdString(filename);
         } else {
@@ -83,8 +87,9 @@ bool Engine::saveDocument(const std::string& filename)
 bool Engine::loadDocument(const std::string& filename)
 {
     try {
-        auto document = std::make_shared<Document>("Loaded Document");
-        bool success = document->loadFromFile(filename);
+        auto document = std::make_shared<Document>(800, 600);
+        // Convert std::string to QString
+        bool success = document->loadFromFile(QString::fromStdString(filename));
         if (success) {
             m_currentDocument = document;
             qDebug() << "Document loaded from:" << QString::fromStdString(filename);

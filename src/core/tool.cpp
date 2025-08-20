@@ -1,14 +1,14 @@
 #include "tool.h"
-#include <QWidget>
-#include <QApplication>
+#include <QDebug>
+#include <QStringList>
 
 namespace core {
 
-// Tool base class implementation
+// Base Tool implementation
 Tool::Tool(const QString& name, QObject* parent)
     : QObject(parent)
     , m_name(name)
-    , m_description("A tool for image editing")
+    , m_description("Base tool class")
     , m_iconPath("")
     , m_active(false)
     , m_canvas(nullptr)
@@ -17,111 +17,119 @@ Tool::Tool(const QString& name, QObject* parent)
 
 Tool::~Tool() = default;
 
-void Tool::activate(QWidget* canvas) {
-    if (m_active) return;
-    
+void Tool::activate(QWidget* canvas)
+{
     m_canvas = canvas;
     m_active = true;
     onActivated();
     emit activated();
 }
 
-void Tool::deactivate() {
-    if (!m_active) return;
-    
-    onDeactivated();
+void Tool::deactivate()
+{
     m_active = false;
-    m_canvas = nullptr;
+    onDeactivated();
     emit deactivated();
 }
 
-void Tool::mousePressEvent(const ToolEvent& event) {
-    // Default implementation does nothing
+void Tool::mousePressEvent(const ToolEvent& event)
+{
     Q_UNUSED(event)
+    // Base implementation does nothing
 }
 
-void Tool::mouseMoveEvent(const ToolEvent& event) {
-    // Default implementation does nothing
+void Tool::mouseMoveEvent(const ToolEvent& event)
+{
     Q_UNUSED(event)
+    // Base implementation does nothing
 }
 
-void Tool::mouseReleaseEvent(const ToolEvent& event) {
-    // Default implementation does nothing
+void Tool::mouseReleaseEvent(const ToolEvent& event)
+{
     Q_UNUSED(event)
+    // Base implementation does nothing
 }
 
-void Tool::keyPressEvent(QKeyEvent* event) {
-    // Default implementation does nothing
+void Tool::keyPressEvent(QKeyEvent* event)
+{
     Q_UNUSED(event)
+    // Base implementation does nothing
 }
 
-void Tool::keyReleaseEvent(QKeyEvent* event) {
-    // Default implementation does nothing
+void Tool::keyReleaseEvent(QKeyEvent* event)
+{
     Q_UNUSED(event)
+    // Base implementation does nothing
 }
 
-void Tool::draw(QPainter& painter, const QPointF& pos) {
-    // Default implementation does nothing
+void Tool::draw(QPainter& painter, const QPointF& pos)
+{
     Q_UNUSED(painter)
     Q_UNUSED(pos)
+    // Base implementation does nothing
 }
 
-void Tool::drawPreview(QPainter& painter, const QRectF& bounds) {
-    // Default implementation does nothing
+void Tool::drawPreview(QPainter& painter, const QRectF& bounds)
+{
     Q_UNUSED(painter)
     Q_UNUSED(bounds)
+    // Base implementation does nothing
 }
 
-QCursor Tool::cursor() const {
+QCursor Tool::cursor() const
+{
     return Qt::ArrowCursor;
 }
 
-QCursor Tool::cursor(const QPointF& pos) const {
-    // Default implementation returns the same cursor for all positions
+QCursor Tool::cursor(const QPointF& pos) const
+{
     Q_UNUSED(pos)
     return cursor();
 }
 
-QWidget* Tool::createOptionsWidget() {
-    // Default implementation returns nullptr
+QWidget* Tool::createOptionsWidget()
+{
     return nullptr;
 }
 
-void Tool::updateOptions() {
-    // Default implementation does nothing
+void Tool::updateOptions()
+{
+    // Base implementation does nothing
 }
 
-void Tool::savePreset(const QString& name) {
-    // Default implementation does nothing
+void Tool::savePreset(const QString& name)
+{
     Q_UNUSED(name)
+    // Base implementation does nothing
 }
 
-void Tool::loadPreset(const QString& name) {
-    // Default implementation does nothing
+void Tool::loadPreset(const QString& name)
+{
     Q_UNUSED(name)
+    // Base implementation does nothing
 }
 
-QStringList Tool::getPresetNames() const {
-    // Default implementation returns empty list
+QStringList Tool::getPresetNames() const
+{
     return QStringList();
 }
 
-void Tool::onActivated() {
-    // Default implementation does nothing
+void Tool::onActivated()
+{
+    // Base implementation does nothing
 }
 
-void Tool::onDeactivated() {
-    // Default implementation does nothing
+void Tool::onDeactivated()
+{
+    // Base implementation does nothing
 }
 
-void Tool::updateCursor() {
-    if (m_canvas) {
-        m_canvas->setCursor(cursor());
-        emit cursorChanged();
-    }
+void Tool::updateCursor()
+{
+    emit cursorChanged();
 }
 
-// Brush tool implementation
+// Brush Tool implementation
 BrushTool::BrushTool(QObject* parent)
     : Tool("Brush", parent)
     , m_size(10.0f)
@@ -132,126 +140,136 @@ BrushTool::BrushTool(QObject* parent)
     , m_color(Qt::black)
     , m_isDrawing(false)
     , m_lastPos(0, 0)
-    , m_pressureSensitivity(true)
-    , m_sizePressure(true)
-    , m_opacityPressure(true)
+    , m_pressureSensitivity(false)
+    , m_sizePressure(false)
+    , m_opacityPressure(false)
     , m_flowPressure(false)
 {
-    m_description = "Paint with customizable brush strokes";
+    m_description = "Brush tool for freehand drawing";
 }
 
-void BrushTool::setSize(float size) {
-    m_size = std::max(1.0f, size);
-    updateOptions();
+void BrushTool::setSize(float size)
+{
+    m_size = size;
+    emit optionsChanged();
 }
 
-void BrushTool::setOpacity(float opacity) {
-    m_opacity = std::clamp(opacity, 0.0f, 1.0f);
-    updateOptions();
+void BrushTool::setOpacity(float opacity)
+{
+    m_opacity = opacity;
+    emit optionsChanged();
 }
 
-void BrushTool::setFlow(float flow) {
-    m_flow = std::clamp(flow, 0.0f, 1.0f);
-    updateOptions();
+void BrushTool::setFlow(float flow)
+{
+    m_flow = flow;
+    emit optionsChanged();
 }
 
-void BrushTool::setHardness(float hardness) {
-    m_hardness = std::clamp(hardness, 0.0f, 1.0f);
-    updateOptions();
+void BrushTool::setHardness(float hardness)
+{
+    m_hardness = hardness;
+    emit optionsChanged();
 }
 
-void BrushTool::setSpacing(float spacing) {
-    m_spacing = std::clamp(spacing, 0.1f, 2.0f);
-    updateOptions();
+void BrushTool::setSpacing(float spacing)
+{
+    m_spacing = spacing;
+    emit optionsChanged();
 }
 
-void BrushTool::setColor(const QColor& color) {
+void BrushTool::setColor(const QColor& color)
+{
     m_color = color;
-    updateOptions();
+    emit optionsChanged();
 }
 
-void BrushTool::setPressureSensitivity(bool enabled) {
-    m_pressureSensitivity = enabled;
-    updateOptions();
-}
-
-void BrushTool::setSizePressure(bool enabled) {
-    m_sizePressure = enabled;
-    updateOptions();
-}
-
-void BrushTool::setOpacityPressure(bool enabled) {
-    m_opacityPressure = enabled;
-    updateOptions();
-}
-
-void BrushTool::setFlowPressure(bool enabled) {
-    m_flowPressure = enabled;
-    updateOptions();
-}
-
-void BrushTool::mousePressEvent(const ToolEvent& event) {
+void BrushTool::mousePressEvent(const ToolEvent& event)
+{
+    m_isDrawing = true;
+    m_lastPos = event.pos;
     beginStroke(event.pos);
 }
 
-void BrushTool::mouseMoveEvent(const ToolEvent& event) {
-    continueStroke(event.pos);
+void BrushTool::mouseMoveEvent(const ToolEvent& event)
+{
+    if (m_isDrawing) {
+        continueStroke(event.pos);
+        m_lastPos = event.pos;
+    }
 }
 
-void BrushTool::mouseReleaseEvent(const ToolEvent& event) {
-    endStroke();
+void BrushTool::mouseReleaseEvent(const ToolEvent& event)
+{
+    Q_UNUSED(event)
+    if (m_isDrawing) {
+        endStroke();
+        m_isDrawing = false;
+    }
 }
 
-void BrushTool::draw(QPainter& painter, const QPointF& pos) {
+void BrushTool::draw(QPainter& painter, const QPointF& pos)
+{
     if (m_isDrawing) {
         drawBrushStroke(painter, m_lastPos, pos);
     }
 }
 
-void BrushTool::beginStroke(const QPointF& pos) {
-    m_isDrawing = true;
-    m_lastPos = pos;
+void BrushTool::setPressureSensitivity(bool enabled)
+{
+    m_pressureSensitivity = enabled;
+}
+
+void BrushTool::setSizePressure(bool enabled)
+{
+    m_sizePressure = enabled;
+}
+
+void BrushTool::setOpacityPressure(bool enabled)
+{
+    m_opacityPressure = enabled;
+}
+
+void BrushTool::setFlowPressure(bool enabled)
+{
+    m_flowPressure = enabled;
+}
+
+void BrushTool::beginStroke(const QPointF& pos)
+{
     m_strokePoints.clear();
     m_strokePoints.push_back(pos);
 }
 
-void BrushTool::continueStroke(const QPointF& pos) {
-    if (!m_isDrawing) return;
-    
-    // Add point if it's far enough from the last one
-    float distance = QLineF(m_lastPos, pos).length();
-    if (distance >= m_size * m_spacing) {
-        m_strokePoints.push_back(pos);
-        m_lastPos = pos;
-    }
+void BrushTool::continueStroke(const QPointF& pos)
+{
+    m_strokePoints.push_back(pos);
 }
 
-void BrushTool::endStroke() {
-    m_isDrawing = false;
-    m_strokePoints.clear();
+void BrushTool::endStroke()
+{
+    // Stroke completed
 }
 
-void BrushTool::drawBrushStroke(QPainter& painter, const QPointF& from, const QPointF& to) {
-    painter.setPen(QPen(m_color, m_size, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-    painter.setOpacity(m_opacity);
-    painter.drawLine(from, to);
+void BrushTool::drawBrushStroke(QPainter& painter, const QPointF& from, const QPointF& to)
+{
+    Q_UNUSED(painter)
+    Q_UNUSED(from)
+    Q_UNUSED(to)
+    // TODO: Implement actual brush stroke drawing
 }
 
-QPointF BrushTool::interpolateStroke(const QPointF& p0, const QPointF& p1, const QPointF& p2, const QPointF& p3) {
-    // Catmull-Rom spline interpolation for smooth strokes
-    float t = 0.5f;
-    float t2 = t * t;
-    float t3 = t2 * t;
-    
-    return 0.5f * (
-        (-t3 + 2*t2 - t) * p0 +
-        (3*t3 - 5*t2 + 2) * p1 +
-        (-3*t3 + 4*t2 + t) * p2 +
-        (t3 - t2) * p3
-    );
+QPointF BrushTool::interpolateStroke(const QPointF& p0, const QPointF& p1, const QPointF& p2, const QPointF& p3)
+{
+    Q_UNUSED(p0)
+    Q_UNUSED(p1)
+    Q_UNUSED(p2)
+    Q_UNUSED(p3)
+    // TODO: Implement stroke interpolation
+    return QPointF();
 }
 
-// Selection tool implementation
+// Selection Tool implementation
 SelectionTool::SelectionTool(SelectionType type, QObject* parent)
     : Tool("Selection", parent)
     , m_selectionType(type)
@@ -261,89 +279,77 @@ SelectionTool::SelectionTool(SelectionType type, QObject* parent)
     , m_startPos(0, 0)
     , m_currentPos(0, 0)
 {
-    m_description = "Select areas of the image";
+    m_description = "Selection tool for selecting image areas";
 }
 
-void SelectionTool::setSelectionType(SelectionType type) {
+void SelectionTool::setSelectionType(SelectionType type)
+{
     m_selectionType = type;
-    updateOptions();
+    emit optionsChanged();
 }
 
-void SelectionTool::setFeather(float feather) {
-    m_feather = std::max(0.0f, feather);
-    updateOptions();
+void SelectionTool::setFeather(float feather)
+{
+    m_feather = feather;
+    emit optionsChanged();
 }
 
-void SelectionTool::setAntiAlias(bool antiAlias) {
+void SelectionTool::setAntiAlias(bool antiAlias)
+{
     m_antiAlias = antiAlias;
-    updateOptions();
+    emit optionsChanged();
 }
 
-void SelectionTool::mousePressEvent(const ToolEvent& event) {
+void SelectionTool::mousePressEvent(const ToolEvent& event)
+{
     m_isSelecting = true;
     m_startPos = event.pos;
     m_currentPos = event.pos;
-    m_selectionPath = QPainterPath();
-}
-
-void SelectionTool::mouseMoveEvent(const ToolEvent& event) {
-    if (!m_isSelecting) return;
-    
-    m_currentPos = event.pos;
     updateSelection();
 }
 
-void SelectionTool::mouseReleaseEvent(const ToolEvent& event) {
-    if (!m_isSelecting) return;
-    
-    m_currentPos = event.pos;
-    finalizeSelection();
-    m_isSelecting = false;
-}
-
-void SelectionTool::draw(QPainter& painter, const QPointF& pos) {
-    // Draw selection preview
-    Q_UNUSED(pos)
-}
-
-void SelectionTool::drawPreview(QPainter& painter, const QRectF& bounds) {
-    if (m_selectionPath.isEmpty()) return;
-    
-    painter.setPen(QPen(Qt::blue, 2.0, Qt::DashLine));
-    painter.setBrush(Qt::transparent);
-    painter.drawPath(m_selectionPath);
-}
-
-void SelectionTool::updateSelection() {
-    m_selectionPath = QPainterPath();
-    
-    switch (m_selectionType) {
-        case SelectionType::Rectangular: {
-            QRectF rect(m_startPos, m_currentPos);
-            rect = rect.normalized();
-            m_selectionPath.addRect(rect);
-            break;
-        }
-        case SelectionType::Elliptical: {
-            QRectF rect(m_startPos, m_currentPos);
-            rect = rect.normalized();
-            m_selectionPath.addEllipse(rect);
-            break;
-        }
-        case SelectionType::Lasso:
-            // Lasso selection would be implemented here
-            break;
-        default:
-            break;
+void SelectionTool::mouseMoveEvent(const ToolEvent& event)
+{
+    if (m_isSelecting) {
+        m_currentPos = event.pos;
+        updateSelection();
     }
 }
 
-void SelectionTool::finalizeSelection() {
-    updateSelection();
-    // Here you would apply the selection to the document
+void SelectionTool::mouseReleaseEvent(const ToolEvent& event)
+{
+    Q_UNUSED(event)
+    if (m_isSelecting) {
+        finalizeSelection();
+        m_isSelecting = false;
+    }
 }
 
-// Move tool implementation
+void SelectionTool::draw(QPainter& painter, const QPointF& pos)
+{
+    Q_UNUSED(painter)
+    Q_UNUSED(pos)
+    // TODO: Implement selection drawing
+}
+
+void SelectionTool::drawPreview(QPainter& painter, const QRectF& bounds)
+{
+    Q_UNUSED(painter)
+    Q_UNUSED(bounds)
+    // TODO: Implement selection preview
+}
+
+void SelectionTool::updateSelection()
+{
+    // TODO: Update selection based on current state
+}
+
+void SelectionTool::finalizeSelection()
+{
+    // TODO: Finalize the selection
+}
+
+// Move Tool implementation
 MoveTool::MoveTool(QObject* parent)
     : Tool("Move", parent)
     , m_isMoving(false)
@@ -351,47 +357,54 @@ MoveTool::MoveTool(QObject* parent)
     , m_lastPos(0, 0)
     , m_offset(0, 0)
 {
-    m_description = "Move layers and selections";
+    m_description = "Move tool for repositioning layers";
 }
 
-void MoveTool::mousePressEvent(const ToolEvent& event) {
+void MoveTool::mousePressEvent(const ToolEvent& event)
+{
     m_isMoving = true;
     m_startPos = event.pos;
     m_lastPos = event.pos;
+    startMove(event.pos);
 }
 
-void MoveTool::mouseMoveEvent(const ToolEvent& event) {
-    if (!m_isMoving) return;
-    
-    updateMove(event.pos);
+void MoveTool::mouseMoveEvent(const ToolEvent& event)
+{
+    if (m_isMoving) {
+        updateMove(event.pos);
+        m_lastPos = event.pos;
+    }
 }
 
-void MoveTool::mouseReleaseEvent(const ToolEvent& event) {
-    if (!m_isMoving) return;
-    
-    endMove();
+void MoveTool::mouseReleaseEvent(const ToolEvent& event)
+{
+    Q_UNUSED(event)
+    if (m_isMoving) {
+        endMove();
+        m_isMoving = false;
+    }
 }
 
-QCursor MoveTool::cursor() const {
-    return m_isMoving ? Qt::ClosedHandCursor : Qt::OpenHandCursor;
+QCursor MoveTool::cursor() const
+{
+    return Qt::SizeAllCursor;
 }
 
-void MoveTool::startMove(const QPointF& pos) {
-    m_startPos = pos;
-    m_lastPos = pos;
-    m_offset = QPointF(0, 0);
+void MoveTool::startMove(const QPointF& pos)
+{
+    Q_UNUSED(pos)
+    // TODO: Start moving the selected layer
 }
 
-void MoveTool::updateMove(const QPointF& pos) {
-    m_offset += pos - m_lastPos;
-    m_lastPos = pos;
-    
-    // Here you would update the document's active layer position
+void MoveTool::updateMove(const QPointF& pos)
+{
+    Q_UNUSED(pos)
+    // TODO: Update layer position
 }
 
-void MoveTool::endMove() {
-    m_isMoving = false;
-    // Here you would finalize the move operation
+void MoveTool::endMove()
+{
+    // TODO: End the move operation
 }
 
 } // namespace core

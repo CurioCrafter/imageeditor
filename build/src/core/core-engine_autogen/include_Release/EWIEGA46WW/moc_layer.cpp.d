@@ -5,6 +5,7 @@ C:/Users/andre/Desktop/NewProject/build/src/core/core-engine_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPointF \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h \
@@ -133,6 +134,8 @@ C:/Users/andre/Desktop/NewProject/build/src/core/core-engine_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QColor \
+  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QFont \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QImage \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QPainter \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QTransform \

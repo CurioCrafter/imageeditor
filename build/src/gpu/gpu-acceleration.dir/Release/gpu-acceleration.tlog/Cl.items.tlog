@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_renderer.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\vulkan_renderer.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_shader.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\vulkan_shader.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_texture.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\vulkan_texture.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_buffer.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\vulkan_buffer.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_command_pool.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\vulkan_command_pool.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_sync.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\vulkan_sync.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\opengl_renderer.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\opengl_renderer.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\opengl_shader.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\opengl_shader.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\opengl_texture.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\opengl_texture.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\gpu_utils.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\gpu_utils.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\render_target.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\render_target.obj
+C:\Users\andre\Desktop\NewProject\src\gpu\shader_manager.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\shader_manager.obj
+C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_Release.cpp;C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration.dir\Release\mocs_compilation_Release.obj

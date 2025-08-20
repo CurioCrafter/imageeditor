@@ -3,216 +3,315 @@
 #include <QObject>
 #include <QString>
 #include <QSize>
-#include <QDateTime>
+#include <QRect>
 #include <QImage>
-#include <QPainterPath>
+#include <QDateTime>
+#include <QPainter>
 #include <memory>
 #include <vector>
-#include <unordered_map>
-#include <mutex>
-#include <atomic>
-#include <chrono>
 
 namespace core {
 
 // Forward declarations
 class Layer;
-class UndoAction;
+class RasterLayer;
+class AdjustmentLayer;
+class TextLayer;
 
-// Type aliases
+// Type definitions
 using LayerPtr = std::shared_ptr<Layer>;
 
-// Enums
+// Color modes
 enum class ColorMode {
-    RGB,
-    RGBA,
-    Grayscale,
-    Indexed
+    RGBA8,      // 8-bit per channel RGBA
+    RGBA16,     // 16-bit per channel RGBA
+    RGBA32F,    // 32-bit float per channel RGBA
+    CMYK8,      // 8-bit per channel CMYK
+    Lab,        // LAB color space
+    Grayscale   // Grayscale
 };
 
-enum class RenderQuality {
-    Draft,
-    Normal,
-    High
-};
+// Blend modes (defined in layer.h)
+enum class BlendMode;
 
 /**
- * @brief The Document class represents an image document with multiple layers
- * 
- * This class provides a complete document management system with:
- * - Multiple layer support (raster, adjustment, text)
- * - Non-destructive editing
- * - Undo/redo system
- * - GPU acceleration
- * - Performance optimization
+ * @brief Document class represents an image document with layers
  */
 class Document : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit Document(QObject* parent = nullptr);
-    explicit Document(const QSize& size, ColorMode colorMode = ColorMode::RGBA, QObject* parent = nullptr);
+    /**
+     * @brief Construct a new Document with specified dimensions
+     */
+    explicit Document(int width, int height, QObject* parent = nullptr);
+    
+    /**
+     * @brief Destructor
+     */
     ~Document();
 
-    // Document properties
+    // === Properties ===
+    
+    /**
+     * @brief Get document name
+     */
     QString getName() const { return m_name; }
-    void setName(const QString& name);
     
-    QSize getSize() const { return m_size; }
-    void setSize(const QSize& size);
+    /**
+     * @brief Set document name
+     */
+    void setName(const QString& name) { m_name = name; }
     
+    /**
+     * @brief Get document size
+     */
+    QSize size() const { return QSize(m_width, m_height); }
+    
+    /**
+     * @brief Get document size (alias for size())
+     */
+    QSize getSize() const { return QSize(m_width, m_height); }
+    
+    /**
+     * @brief Get document width
+     */
+    int width() const { return m_width; }
+    
+    /**
+     * @brief Get document height
+     */
+    int height() const { return m_height; }
+    
+    /**
+     * @brief Get color mode
+     */
     ColorMode getColorMode() const { return m_colorMode; }
-    void setColorMode(ColorMode mode);
     
-    QDateTime getCreatedDate() const { return m_createdDate; }
-    QDateTime getModifiedDate() const { return m_modifiedDate; }
-
-    // Layer management
-    int getLayerCount() const { return static_cast<int>(m_layers.size()); }
-    const std::vector<LayerPtr>& getLayers() const { return m_layers; }
-    LayerPtr getLayerAt(int index) const;
-    LayerPtr getActiveLayer() const;
-    int getActiveLayerIndex() const { return m_activeLayerIndex; }
+    /**
+     * @brief Set color mode
+     */
+    void setColorMode(ColorMode mode) { m_colorMode = mode; }
     
+    // === Layer Management ===
+    
+    /**
+     * @brief Add a layer to the document
+     * @param layer The layer to add
+     * @param index Position to insert (-1 for top)
+     */
     void addLayer(LayerPtr layer, int index = -1);
+    
+    /**
+     * @brief Remove a layer by index
+     */
     void removeLayer(int index);
-    void moveLayer(int fromIndex, int toIndex);
-    void duplicateLayer(int index);
-    void mergeDown(int index);
-    void mergeVisible();
-    void flattenImage();
+    
+    /**
+     * @brief Move a layer from one position to another
+     */
+    void moveLayer(int from, int to);
+    
+    /**
+     * @brief Get all layers
+     */
+    const std::vector<LayerPtr>& getLayers() const { return m_layers; }
+    
+    /**
+     * @brief Get layer at specific index
+     */
+    LayerPtr getLayerAt(int index) const;
+    
+    /**
+     * @brief Get layer by name
+     */
+    LayerPtr getLayerByName(const QString& name) const;
+    
+    /**
+     * @brief Get active layer
+     */
+    LayerPtr getActiveLayer() const { return m_activeLayer; }
+    
+    /**
+     * @brief Set active layer by index
+     */
     void setActiveLayer(int index);
     
-    // Layer operations
-    void showLayer(int index, bool show);
-    void lockLayer(int index, bool lock);
-    void setLayerOpacity(int index, float opacity);
-    void setLayerBlendMode(int index, const QString& blendMode);
-
-    // Rendering
-    QImage render(const QRect& bounds = QRect());
-    QImage renderThumbnail(const QSize& size = QSize(128, 128));
-    void render(QPainter* painter, const QRect& bounds = QRect());
-
-    // Image transformations
-    void rotate(double angle);
-    void scale(const QSize& newSize);
-    void flipHorizontal();
-    void flipVertical();
-
-    // Selection management
-    void setSelection(const QPainterPath& selection);
-    void clearSelection();
-    QPainterPath getSelection() const;
-
-    // Undo/redo system
-    void beginUndoGroup(const QString& name = QString());
-    void endUndoGroup();
-    void addUndoAction(std::unique_ptr<UndoAction> action);
-    bool canUndo() const { return !m_undoStack.empty(); }
-    bool canRedo() const { return !m_redoStack.empty(); }
+    /**
+     * @brief Get layer count
+     */
+    int getLayerCount() const { return static_cast<int>(m_layers.size()); }
+    
+    // === Rendering ===
+    
+    /**
+     * @brief Render the document to an image
+     * @param viewport Optional viewport to render (null = entire document)
+     */
+    QImage render(const QRect& viewport = QRect()) const;
+    
+    /**
+     * @brief Render the document to a painter
+     */
+    void render(QPainter* painter, const QRect& viewport = QRect()) const;
+    
+    // === File Operations ===
+    
+    /**
+     * @brief Load document from file
+     */
+    bool loadFromFile(const QString& filename);
+    
+    /**
+     * @brief Save document to file
+     */
+    bool saveToFile(const QString& filename) const;
+    
+    /**
+     * @brief Export document as image
+     */
+    bool exportImage(const QString& filename, const QString& format = "PNG") const;
+    
+    /**
+     * @brief Get filename
+     */
+    QString getFilename() const { return m_filename; }
+    
+    // === History ===
+    
+    /**
+     * @brief Check if can undo
+     */
+    bool canUndo() const { return false; } // TODO: Implement
+    
+    /**
+     * @brief Check if can redo
+     */
+    bool canRedo() const { return false; } // TODO: Implement
+    
+    /**
+     * @brief Undo last operation
+     */
     void undo();
+    
+    /**
+     * @brief Redo last undone operation
+     */
     void redo();
     
-    // File I/O
-    bool loadFromFile(const QString& filename);
-    bool saveToFile(const QString& filename) const;
-    bool exportToFile(const QString& filename, const QSize& size = QSize()) const;
+    // === Modifications ===
     
-    // Performance optimization
-    void setRenderQuality(RenderQuality quality);
-    RenderQuality getRenderQuality() const;
-    void enableGPUAcceleration(bool enable);
-    bool isGPUAccelerationEnabled() const;
+    /**
+     * @brief Check if document is modified
+     */
+    bool isModified() const { return m_modified; }
     
-    // Signals
+    /**
+     * @brief Get creation date
+     */
+    QDateTime getCreatedDate() const { return m_createdDate; }
+    
+    /**
+     * @brief Get modification date
+     */
+    QDateTime getModifiedDate() const { return m_modifiedDate; }
+    
+    // === Document Operations ===
+    
+    /**
+     * @brief Resize the document
+     */
+    void resize(int width, int height);
+    
+    /**
+     * @brief Crop the document
+     */
+    void crop(const QRect& rect);
+    
 signals:
+    /**
+     * @brief Emitted when a layer is added
+     */
     void layerAdded(int index);
+    
+    /**
+     * @brief Emitted when a layer is removed
+     */
     void layerRemoved(int index);
-    void layerMoved(int fromIndex, int toIndex);
+    
+    /**
+     * @brief Emitted when a layer is moved
+     */
+    void layerMoved(int from, int to);
+    
+    /**
+     * @brief Emitted when a layer changes
+     */
     void layerChanged(int index);
+    
+    /**
+     * @brief Emitted when active layer changes
+     */
     void activeLayerChanged(int index);
-    void documentSizeChanged(const QSize& newSize);
-    void documentModified();
-    void renderQualityChanged(RenderQuality quality);
-    void undoStackChanged();
+    
+    /**
+     * @brief Emitted when document size changes
+     */
+    void sizeChanged(const QSize& size);
+    
+    /**
+     * @brief Emitted when document size changes (alias)
+     */
+    void documentSizeChanged(const QSize& size);
+    
+    /**
+     * @brief Emitted when document is modified
+     */
+    void modifiedChanged(bool modified);
+    
+    /**
+     * @brief General document change signal
+     */
+    void documentChanged();
+
+protected:
+    /**
+     * @brief Invalidate render cache
+     */
+    void invalidateCache();
+    
+    /**
+     * @brief Update modification date
+     */
+    void updateModifiedDate();
 
 private:
-    // Private implementation
-    struct DocumentImpl;
-    std::unique_ptr<DocumentImpl> d;
-    
-    // Internal methods
-    void updateModifiedDate();
-    void invalidateCache();
-    void optimizeLayerOrder();
-    QImage compositeLayers(const QRect& bounds);
-    
-    // Member variables
+    /**
+     * @brief Convert blend mode to QPainter composition mode
+     */
+    QPainter::CompositionMode blendModeToQPainter(BlendMode mode) const;
+
+private:
+    // Document properties
     QString m_name;
-    QSize m_size;
+    QString m_filename;
+    int m_width;
+    int m_height;
     ColorMode m_colorMode;
+    
+    // Layers
+    std::vector<LayerPtr> m_layers;
+    LayerPtr m_activeLayer;
+    
+    // State
+    bool m_modified;
     QDateTime m_createdDate;
     QDateTime m_modifiedDate;
     
-    std::vector<LayerPtr> m_layers;
-    int m_activeLayerIndex;
-    
-    // Rendering state
-    RenderQuality m_renderQuality;
-    bool m_gpuAcceleration;
-    
-    // Cache management
-    mutable std::unordered_map<QString, QImage> m_renderCache;
-    mutable std::mutex m_cacheMutex;
-    std::atomic<bool> m_cacheValid;
-    
-    // Selection state
-    QPainterPath m_selection;
-    
-    // Undo/redo system
-    std::vector<std::unique_ptr<UndoAction>> m_undoStack;
-    std::vector<std::unique_ptr<UndoAction>> m_redoStack;
-    std::vector<std::unique_ptr<UndoAction>> m_currentGroup;
-    QString m_currentGroupName;
-    
-    // Performance monitoring
-    mutable std::chrono::steady_clock::time_point m_lastRenderTime;
-    mutable double m_averageRenderTime;
-    mutable int m_renderCount;
-};
-
-// Undo action base class
-class UndoAction {
-public:
-    virtual ~UndoAction() = default;
-    virtual void undo(Document* doc) = 0;
-    virtual void redo(Document* doc) = 0;
-    virtual QString getDescription() const = 0;
-};
-
-// Layer operation undo actions
-class AddLayerAction : public UndoAction {
-public:
-    AddLayerAction(int index, LayerPtr layer);
-    void undo(Document* doc) override;
-    void redo(Document* doc) override;
-    QString getDescription() const override;
-private:
-    int m_index;
-    LayerPtr m_layer;
-};
-
-class RemoveLayerAction : public UndoAction {
-public:
-    RemoveLayerAction(int index, LayerPtr layer);
-    void undo(Document* doc) override;
-    void redo(Document* doc) override;
-    QString getDescription() const override;
-private:
-    int m_index;
-    LayerPtr m_layer;
+    // Cache (for performance)
+    mutable QImage m_cachedRender;
+    mutable bool m_cacheValid = false;
 };
 
 } // namespace core

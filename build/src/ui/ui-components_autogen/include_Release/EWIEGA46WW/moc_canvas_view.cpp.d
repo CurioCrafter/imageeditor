@@ -1,10 +1,12 @@
 C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_canvas_view.cpp: C:/Users/andre/Desktop/NewProject/src/ui/canvas_view.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPoint \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSizeF \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTimer \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
@@ -29,6 +31,7 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcalendar.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qchar.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompare.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompare_impl.h \
@@ -45,6 +48,7 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatetime.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdebug.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qelapsedtimer.h \
@@ -211,5 +215,4 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qwidget.h \
-  C:/Users/andre/Desktop/NewProject/src/core/document.h \
-  C:/Users/andre/Desktop/NewProject/src/core/layer.h
+  C:/Users/andre/Desktop/NewProject/src/core/document.h

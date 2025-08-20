@@ -9,6 +9,9 @@
 #include <QPainter>
 #include <QTransform>
 #include <QDateTime>
+#include <QColor>
+#include <QFont>
+#include <QVariant>
 #include <memory>
 #include <vector>
 
@@ -70,22 +73,11 @@ struct LayerMask {
     float feather = 0.0f;
 };
 
-// Layer effects
+// Layer effects - FIXED: No duplicate definitions
 struct LayerEffects {
-    bool dropShadow = false;
-    bool innerShadow = false;
-    bool outerGlow = false;
-    bool innerGlow = false;
-    bool bevel = false;
-    bool emboss = false;
-    bool satin = false;
-    bool colorOverlay = false;
-    bool gradientOverlay = false;
-    bool patternOverlay = false;
-    bool stroke = false;
-    
     // Effect parameters
     struct DropShadow {
+        bool enabled = false;
         QColor color{Qt::black};
         float opacity = 0.75f;
         float angle = 120.0f;
@@ -97,6 +89,7 @@ struct LayerEffects {
     } dropShadow;
     
     struct InnerShadow {
+        bool enabled = false;
         QColor color{Qt::black};
         float opacity = 0.75f;
         float angle = 120.0f;
@@ -106,6 +99,29 @@ struct LayerEffects {
         bool useGlobalLight = true;
         bool antiAlias = true;
     } innerShadow;
+    
+    struct OuterGlow {
+        bool enabled = false;
+        QColor color{Qt::yellow};
+        float opacity = 0.75f;
+        float spread = 0.0f;
+        float size = 5.0f;
+    } outerGlow;
+    
+    struct InnerGlow {
+        bool enabled = false;
+        QColor color{Qt::yellow};
+        float opacity = 0.75f;
+        float choke = 0.0f;
+        float size = 5.0f;
+    } innerGlow;
+    
+    struct Stroke {
+        bool enabled = false;
+        QColor color{Qt::black};
+        float size = 1.0f;
+        enum Position { Outside, Inside, Center } position = Outside;
+    } stroke;
 };
 
 // Base Layer class with Qt6 integration
@@ -300,9 +316,11 @@ public:
     AdjustmentLayer(AdjustmentType type, QObject* parent = nullptr);
     
     // Adjustment parameters
-    AdjustmentType getType() const { return m_type; }
+    AdjustmentType getAdjustmentType() const { return m_adjustmentType; }
+    void setAdjustmentType(AdjustmentType type);
     void setParameters(const QVariantMap& params);
     QVariantMap getParameters() const { return m_parameters; }
+    void setParameter(const QString& key, const QVariant& value);
     
     // Rendering
     QImage render(const QSize& size = QSize()) override;
@@ -311,12 +329,13 @@ public:
     // Layer operations
     void duplicate() override;
     void rasterize() override;
+    
+    // Adjustment application
+    QImage applyAdjustment(const QImage& input) const;
 
 private:
-    AdjustmentType m_type;
+    AdjustmentType m_adjustmentType;
     QVariantMap m_parameters;
-    
-    QImage applyAdjustment(const QImage& input);
 };
 
 // Text layer for typography

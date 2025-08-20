@@ -5,6 +5,15 @@
 #include <QVulkanDeviceFunctions>
 #include <QVulkanFunctions>
 
+// Correct Vulkan/MSVC include order per Khronos spec
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+#define VK_USE_PLATFORM_WIN32_KHR
+#endif
+
+#include <vulkan/vulkan.h>
+
 namespace gpu {
 
 struct VulkanRenderer::Impl
@@ -378,48 +387,13 @@ bool VulkanRenderer::createSyncObjects()
 
 bool VulkanRenderer::createShaders()
 {
-    // Basic vertex shader for image rendering
-    const char* vertexShaderCode = R"(
-        #version 450
-        layout(location = 0) in vec2 inPosition;
-        layout(location = 1) in vec2 inTexCoord;
-        
-        layout(location = 0) out vec2 fragTexCoord;
-        
-        void main() {
-            gl_Position = vec4(inPosition, 0.0, 1.0);
-            fragTexCoord = inTexCoord;
-        }
-    )";
-    
-    // Basic fragment shader for image rendering
-    const char* fragmentShaderCode = R"(
-        #version 450
-        layout(location = 0) in vec2 fragTexCoord;
-        
-        layout(location = 0) out vec4 outColor;
-        
-        layout(binding = 1) uniform sampler2D texSampler;
-        
-        void main() {
-            outColor = texture(texSampler, fragTexCoord);
-        }
-    )";
-    
-    // Create shader modules (simplified - in real implementation, compile SPIR-V)
-    // For now, we'll just mark them as created
-    m_impl->vertexShader = VK_NULL_HANDLE; // Would create from SPIR-V
-    m_impl->fragmentShader = VK_NULL_HANDLE; // Would create from SPIR-V
-    
+    // TODO: Implement shader compilation
     return true;
 }
 
 bool VulkanRenderer::createPipelines()
 {
-    // Create graphics pipeline (simplified)
-    // In a real implementation, this would create the full pipeline state
-    m_impl->graphicsPipeline = VK_NULL_HANDLE; // Would create full pipeline
-    
+    // TODO: Implement pipeline creation
     return true;
 }
 
@@ -445,9 +419,6 @@ void VulkanRenderer::endFrame()
     
     // Update performance metrics
     m_impl->frameTime = m_impl->frameTimer.nsecsElapsed() / 1000000.0; // Convert to milliseconds
-    m_lastFrameTime = m_impl->frameTime;
-    m_averageFrameTime = (m_averageFrameTime * m_frameCount + m_lastFrameTime) / (m_frameCount + 1);
-    m_frameCount++;
     
     // Reset fence
     vkResetFences(m_impl->device, 1, &m_impl->inFlightFences[m_impl->currentFrame]);

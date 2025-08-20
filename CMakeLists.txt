@@ -5,6 +5,15 @@ project(AdvancedImageEditor VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Add Vulkan/MSVC compatibility definitions for Windows
+if(WIN32)
+    add_compile_definitions(
+        VK_USE_PLATFORM_WIN32_KHR
+        WIN32_LEAN_AND_MEAN
+        NOMINMAX
+    )
+endif()
+
 # Enable Qt6 specific features
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)

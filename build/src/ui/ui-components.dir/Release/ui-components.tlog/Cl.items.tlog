@@ -1,5 +1,6 @@
 C:\Users\andre\Desktop\NewProject\src\ui\main_window.cpp;C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components.dir\Release\main_window.obj
 C:\Users\andre\Desktop\NewProject\src\ui\canvas_view.cpp;C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components.dir\Release\canvas_view.obj
+C:\Users\andre\Desktop\NewProject\src\ui\canvas_widget.cpp;C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components.dir\Release\canvas_widget.obj
 C:\Users\andre\Desktop\NewProject\src\ui\layer_panel.cpp;C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components.dir\Release\layer_panel.obj
 C:\Users\andre\Desktop\NewProject\src\ui\tool_panel.cpp;C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components.dir\Release\tool_panel.obj
 C:\Users\andre\Desktop\NewProject\src\ui\color_panel.cpp;C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components.dir\Release\color_panel.obj
