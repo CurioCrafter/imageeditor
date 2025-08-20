@@ -30,7 +30,8 @@ VkShaderModule createShaderModule(VkDevice device, const std::vector<uint32_t>& 
     createInfo.pCode = code.data();
     
     VkShaderModule shaderModule;
-    if (vkCreateShaderModule(device, &createInfo, nullptr, &shaderModule) != VK_SUCCESS) {
+    // TODO: Implement shader creation
+    // if (vkCreateShaderModule(device, &createInfo, nullptr, &shaderModule) != VK_SUCCESS) {
         qCritical() << "Failed to create shader module";
         return VK_NULL_HANDLE;
     }

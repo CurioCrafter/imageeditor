@@ -49,6 +49,12 @@
 			null
 		],
 		[
+			"C:/Users/andre/Desktop/NewProject/src/ui/main_window_vulkan.h",
+			"MU",
+			"EWIEGA46WW/moc_main_window_vulkan.cpp",
+			null
+		],
+		[
 			"C:/Users/andre/Desktop/NewProject/src/ui/tool_panel.h",
 			"MU",
 			"EWIEGA46WW/moc_tool_panel.cpp",
@@ -282,6 +288,11 @@
 		],
 		[
 			"C:/Users/andre/Desktop/NewProject/src/ui/main_window.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/andre/Desktop/NewProject/src/ui/main_window_vulkan.cpp",
 			"MU",
 			null
 		],

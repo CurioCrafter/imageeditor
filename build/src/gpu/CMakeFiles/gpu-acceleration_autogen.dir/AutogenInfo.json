@@ -17,6 +17,12 @@
 			"MU",
 			"EWIEGA46WW/moc_vulkan_renderer.cpp",
 			null
+		],
+		[
+			"C:/Users/andre/Desktop/NewProject/src/gpu/vulkan_window.h",
+			"MU",
+			"EWIEGA46WW/moc_vulkan_window.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -115,44 +121,44 @@
 		"C:/Users/andre/Desktop/NewProject/src/gpu",
 		"C:/Users/andre/Desktop/NewProject/src",
 		"C:/Users/andre/Desktop/NewProject/src/core",
-		"C:/VulkanSDK/1.4.321.1/Include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
 		"C:/Qt/6.9.1/msvc2022_64/include",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/VulkanSDK/1.4.321.1/Include"
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
 		"C:/Users/andre/Desktop/NewProject/src/gpu",
 		"C:/Users/andre/Desktop/NewProject/src",
 		"C:/Users/andre/Desktop/NewProject/src/core",
-		"C:/VulkanSDK/1.4.321.1/Include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
 		"C:/Qt/6.9.1/msvc2022_64/include",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/VulkanSDK/1.4.321.1/Include"
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
 		"C:/Users/andre/Desktop/NewProject/src/gpu",
 		"C:/Users/andre/Desktop/NewProject/src",
 		"C:/Users/andre/Desktop/NewProject/src/core",
-		"C:/VulkanSDK/1.4.321.1/Include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
 		"C:/Qt/6.9.1/msvc2022_64/include",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/VulkanSDK/1.4.321.1/Include"
 	],
 	"MOC_INCLUDES_Release" : 
 	[
 		"C:/Users/andre/Desktop/NewProject/src/gpu",
 		"C:/Users/andre/Desktop/NewProject/src",
 		"C:/Users/andre/Desktop/NewProject/src/core",
-		"C:/VulkanSDK/1.4.321.1/Include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
 		"C:/Qt/6.9.1/msvc2022_64/include",
+		"C:/Qt/6.9.1/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtGui"
+		"C:/VulkanSDK/1.4.321.1/Include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -248,6 +254,11 @@
 		],
 		[
 			"C:/Users/andre/Desktop/NewProject/src/gpu/vulkan_texture.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/andre/Desktop/NewProject/src/gpu/vulkan_window.cpp",
 			"MU",
 			null
 		]

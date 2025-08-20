@@ -4,6 +4,7 @@
 if(BUILD_UI AND Qt6_FOUND)
     add_library(ui-components STATIC
         main_window.cpp
+        main_window_vulkan.cpp
         canvas_view.cpp
         canvas_widget.cpp
         layer_panel.cpp

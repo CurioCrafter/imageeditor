@@ -6,6 +6,7 @@ if(BUILD_GPU)
     add_library(gpu-acceleration STATIC
         # Vulkan renderer source files
         vulkan_renderer.cpp
+        vulkan_window.cpp
         vulkan_shader.cpp
         vulkan_texture.cpp
         vulkan_buffer.cpp
@@ -25,6 +26,9 @@ if(BUILD_GPU)
     set_target_properties(gpu-acceleration PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
+        AUTOMOC ON
+        AUTOUIC ON
+        AUTORCC ON
     )
     
     # Include directories
@@ -32,6 +36,9 @@ if(BUILD_GPU)
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/..
     )
+    
+    # Link Qt6 libraries (required for QVulkanWindow, QVulkanInstance)
+    target_link_libraries(gpu-acceleration Qt6::Gui)
     
     # Link GPU libraries - prefer Vulkan, fallback to OpenGL
     if(Vulkan_FOUND)
@@ -62,5 +69,6 @@ else()
     add_library(gpu-acceleration INTERFACE)
     target_include_directories(gpu-acceleration INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/..
     )
 endif()

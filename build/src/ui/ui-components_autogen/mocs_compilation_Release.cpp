@@ -5,4 +5,5 @@
 #include <EWIEGA46WW/moc_color_panel.cpp>
 #include <EWIEGA46WW/moc_layer_panel.cpp>
 #include <EWIEGA46WW/moc_main_window.cpp>
+#include <EWIEGA46WW/moc_main_window_vulkan.cpp>
 #include <EWIEGA46WW/moc_tool_panel.cpp>

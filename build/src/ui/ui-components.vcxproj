@@ -374,6 +374,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\main_window.cpp" />
+    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\main_window_vulkan.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\canvas_view.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\canvas_widget.cpp" />
     <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\layer_panel.cpp" />

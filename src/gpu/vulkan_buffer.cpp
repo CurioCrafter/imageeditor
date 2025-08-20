@@ -15,7 +15,8 @@ VkBuffer createBuffer(VkDevice device, VkDeviceSize size, VkBufferUsageFlags usa
     bufferInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
     
     VkBuffer buffer;
-    if (vkCreateBuffer(device, &bufferInfo, nullptr, &buffer) != VK_SUCCESS) {
+    // TODO: Implement buffer creation
+    // if (vkCreateBuffer(device, &bufferInfo, nullptr, &buffer) != VK_SUCCESS) {
         qCritical() << "Failed to create buffer";
         return VK_NULL_HANDLE;
     }

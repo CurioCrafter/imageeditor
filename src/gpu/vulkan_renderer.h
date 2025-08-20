@@ -1,26 +1,27 @@
 #pragma once
 
-#include <vulkan/vulkan.h>
+#include <QVulkanWindowRenderer>
+#include <QVulkanDeviceFunctions>
+#include <QVulkanFunctions>
 #include <memory>
 #include <vector>
-#include <QObject>
 #include <QSize>
 #include <QImage>
 
-namespace gpu {
+namespace core { class Engine; }
 
-class VulkanRenderer : public QObject
+class VulkanRenderer : public QVulkanWindowRenderer
 {
-    Q_OBJECT
-
 public:
-    explicit VulkanRenderer(QObject* parent = nullptr);
+    explicit VulkanRenderer(QVulkanWindow* window, core::Engine* engine);
     ~VulkanRenderer();
 
-    // Initialization and cleanup
-    bool initialize();
-    void cleanup();
-    bool isInitialized() const { return m_initialized; }
+    // QVulkanWindowRenderer interface
+    void initResources() override;
+    void initSwapChainResources() override;
+    void releaseSwapChainResources() override;
+    void releaseResources() override;
+    void startNextFrame() override;
 
     // Device capabilities
     bool supportsComputeShaders() const;
@@ -29,8 +30,6 @@ public:
     QString getDriverVersion() const;
 
     // Rendering operations
-    bool beginFrame();
-    void endFrame();
     bool renderImage(const QImage& image, const QRect& destRect);
     bool renderLayer(const QImage& layer, const QRect& destRect, float opacity = 1.0f);
     bool applyFilter(const QImage& input, QImage& output, const QString& filterName);
@@ -46,33 +45,17 @@ public:
     double getAverageFrameTime() const { return m_averageFrameTime; }
     uint64_t getFrameCount() const { return m_frameCount; }
 
-signals:
-    void deviceLost();
-    void renderError(const QString& error);
-
 private:
-    struct Impl;
-    std::unique_ptr<Impl> m_impl;
+    QVulkanWindow* m_window;
+    core::Engine* m_engine;
+    QVulkanDeviceFunctions* m_deviceFunctions = nullptr;
     
-    bool m_initialized = false;
     double m_lastFrameTime = 0.0;
     double m_averageFrameTime = 0.0;
     uint64_t m_frameCount = 0;
 
     // Private helper methods
-    bool createInstance();
-    bool selectPhysicalDevice();
-    bool createLogicalDevice();
-    bool createSwapchain();
-    bool createRenderPass();
-    bool createFramebuffers();
-    bool createCommandPool();
-    bool createSyncObjects();
-    bool createShaders();
-    bool createPipelines();
-    
+    void createPipelines();
+    void createShaders();
     void updatePerformanceMetrics();
-    void cleanupResources();
 };
-
-} // namespace gpu

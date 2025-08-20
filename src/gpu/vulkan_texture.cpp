@@ -25,7 +25,8 @@ VkImage createImage(VkDevice device, uint32_t width, uint32_t height,
     imageInfo.samples = VK_SAMPLE_COUNT_1_BIT;
     
     VkImage image;
-    if (vkCreateImage(device, &imageInfo, nullptr, &image) != VK_SUCCESS) {
+    // TODO: Implement image creation
+    // if (vkCreateImage(device, &imageInfo, nullptr, &image) != VK_SUCCESS) {
         qCritical() << "Failed to create image";
         return VK_NULL_HANDLE;
     }
@@ -47,7 +48,8 @@ VkImageView createImageView(VkDevice device, VkImage image, VkFormat format)
     viewInfo.subresourceRange.layerCount = 1;
     
     VkImageView imageView;
-    if (vkCreateImageView(device, &viewInfo, nullptr, &imageView) != VK_SUCCESS) {
+    // TODO: Implement image view creation
+    // if (vkCreateImageView(device, &viewInfo, nullptr, &imageView) != VK_SUCCESS) {
         qCritical() << "Failed to create image view";
         return VK_NULL_HANDLE;
     }
