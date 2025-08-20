@@ -1,18 +1,14 @@
 C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_canvas_view.cpp: C:/NewProject/src/ui/canvas_view.h \
-  C:/NewProject/src/core/command.h \
   C:/NewProject/src/core/document.h \
-  C:/NewProject/src/core/layer.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPoint \
-  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPointF \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSizeF \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTimer \
-  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h \
@@ -156,7 +152,6 @@ C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QBrush \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QColor \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QCursor \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QFont \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QImage \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QKeyEvent \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QMouseEvent \
@@ -165,7 +160,6 @@ C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QPen \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QPixmap \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QTransform \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QUndoCommand \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QWheelEvent \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qaction.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qbitmap.h \
@@ -204,7 +198,6 @@ C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtransform.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qundostack.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qvector2d.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qvectornd.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs.h \

@@ -1,7 +1,11 @@
 C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_layer.cpp: C:/NewProject/src/core/layer.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
-  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPoint \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPointF \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QVariant \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h \
@@ -23,6 +27,7 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcalendar.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qchar.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompare.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcompare_impl.h \
@@ -33,8 +38,11 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontainerfwd.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontainertools_impl.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdatetime.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qdebug.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qendian.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qflags.h \
@@ -45,6 +53,7 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qgenericatomic.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qglobal.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qglobalstatic.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qhash.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qhashfunctions.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qiterable.h \
@@ -52,8 +61,10 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qline.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlist.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlocale.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qlogging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmalloc.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmap.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmargins.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmath.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmetacontainer.h \
@@ -73,7 +84,11 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qrefcount.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qscopeguard.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qset.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qshareddata.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qshareddata_impl.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsharedpointer.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsharedpointer_impl.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qsize.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qspan.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qstdlibdetection.h \
@@ -101,6 +116,7 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtdeprecationdefinitions.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtenvironmentvariables.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtextstream.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtformat_impl.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtnoop.h \
@@ -113,10 +129,13 @@ C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qtypes.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvariant.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QColor \
+  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QFont \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QImage \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QPainter \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QTransform \

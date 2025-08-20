@@ -44,9 +44,6 @@ BUILD_UI:BOOL=ON
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:UNINITIALIZED=Release
-
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
 // else will be ignored.
@@ -275,9 +272,6 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
-
-//No help, variable specified on the command line.
-QT_OPENGL:UNINITIALIZED=ON
 
 //The directory containing a CMake configuration file for Qt6ConcurrentPrivate.
 Qt6ConcurrentPrivate_DIR:PATH=C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6ConcurrentPrivate

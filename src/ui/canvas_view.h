@@ -19,6 +19,7 @@
 #include <QPainterPath>
 
 #include "../core/document.h"
+namespace core { class RasterLayer; }
 
 namespace ui {
 
@@ -88,6 +89,8 @@ protected:
 private:
     void updateCursor();
     void updateCanvasPixmap();
+    void updateFromDocument();
+    core::RasterLayer* activeRasterLayer();
     void drawBrushStroke(const QPointF& from, const QPointF& to);
     void drawEraserStroke(const QPointF& from, const QPointF& to);
     void drawGrid(QPainter* painter, const QRectF& rect);

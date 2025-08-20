@@ -4,22 +4,19 @@
     <ClCompile Include="C:\NewProject\build\src\core\core-engine_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files\Generated</Filter>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\core\brush_engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\NewProject\src\core\engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\core\tool.cpp">
+    <ClCompile Include="C:\NewProject\src\core\layer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\NewProject\src\core\document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\core\command.cpp">
+    <ClCompile Include="C:\NewProject\src\core\brush_engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\NewProject\src\core\layer.cpp">
+    <ClCompile Include="C:\NewProject\src\core\tool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\NewProject\build\src\core\core-engine_autogen\mocs_compilation_Release.cpp">
@@ -33,35 +30,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\NewProject\src\core\brush_engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\core\engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\core\filter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\core\tool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\core\document.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\core\command.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\NewProject\src\core\layer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="C:\NewProject\src\core\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{3658A0FC-0A6D-3A83-B78E-2274796A90AB}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{A03C035A-0236-35C0-AE25-8E05CD3291E2}</UniqueIdentifier>
     </Filter>

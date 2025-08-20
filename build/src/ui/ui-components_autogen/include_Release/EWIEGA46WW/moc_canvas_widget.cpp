@@ -39,39 +39,37 @@ template <> constexpr inline auto ui::CanvasWidget::qt_create_metaobjectdata<qt_
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "ui::CanvasWidget",
-        "ToolType",
-        "Brush",
-        "Eraser",
-        "Line",
-        "Rectangle",
-        "Ellipse",
-        "Selection",
-        "Lasso",
-        "MagicWand",
-        "Move",
-        "Zoom",
-        "Pan"
+        "zoomChanged",
+        "",
+        "zoom",
+        "viewChanged",
+        "toolActivated",
+        "core::Tool*",
+        "tool",
+        "documentChanged",
+        "core::Document*",
+        "document"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'zoomChanged'
+        QtMocHelpers::SignalData<void(double)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Double, 3 },
+        }}),
+        // Signal 'viewChanged'
+        QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'toolActivated'
+        QtMocHelpers::SignalData<void(core::Tool *)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 6, 7 },
+        }}),
+        // Signal 'documentChanged'
+        QtMocHelpers::SignalData<void(core::Document *)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 9, 10 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
     QtMocHelpers::UintData qt_enums {
-        // enum 'ToolType'
-        QtMocHelpers::EnumData<ToolType>(1, 1, QMC::EnumFlags{}).add({
-            {    2, ToolType::Brush },
-            {    3, ToolType::Eraser },
-            {    4, ToolType::Line },
-            {    5, ToolType::Rectangle },
-            {    6, ToolType::Ellipse },
-            {    7, ToolType::Selection },
-            {    8, ToolType::Lasso },
-            {    9, ToolType::MagicWand },
-            {   10, ToolType::Move },
-            {   11, ToolType::Zoom },
-            {   12, ToolType::Pan },
-        }),
     };
     return QtMocHelpers::metaObjectData<CanvasWidget, qt_meta_tag_ZN2ui12CanvasWidgetE_t>(QMC::MetaObjectFlag{}, qt_stringData,
             qt_methods, qt_properties, qt_enums);
@@ -89,10 +87,25 @@ Q_CONSTINIT const QMetaObject ui::CanvasWidget::staticMetaObject = { {
 void ui::CanvasWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<CanvasWidget *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->zoomChanged((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 1: _t->viewChanged(); break;
+        case 2: _t->toolActivated((*reinterpret_cast< std::add_pointer_t<core::Tool*>>(_a[1]))); break;
+        case 3: _t->documentChanged((*reinterpret_cast< std::add_pointer_t<core::Document*>>(_a[1]))); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (CanvasWidget::*)(double )>(_a, &CanvasWidget::zoomChanged, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (CanvasWidget::*)()>(_a, &CanvasWidget::viewChanged, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (CanvasWidget::*)(core::Tool * )>(_a, &CanvasWidget::toolActivated, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (CanvasWidget::*)(core::Document * )>(_a, &CanvasWidget::documentChanged, 3))
+            return;
+    }
 }
 
 const QMetaObject *ui::CanvasWidget::metaObject() const
@@ -111,6 +124,42 @@ void *ui::CanvasWidget::qt_metacast(const char *_clname)
 int ui::CanvasWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 4)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 4;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 4)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 4;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void ui::CanvasWidget::zoomChanged(double _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void ui::CanvasWidget::viewChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void ui::CanvasWidget::toolActivated(core::Tool * _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1);
+}
+
+// SIGNAL 3
+void ui::CanvasWidget::documentChanged(core::Document * _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
 }
 QT_WARNING_POP

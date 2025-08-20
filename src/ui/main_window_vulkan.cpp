@@ -1,125 +1,125 @@
 #include "main_window_vulkan.h"
-#include <QVulkanInstance>
 #include <QApplication>
 #include <QMessageBox>
 #include <QDebug>
-
-// Only include GPU headers when GPU module is available
-#ifdef GPU_AVAILABLE
-#include "../gpu/vulkan_window.h"
-#endif
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QWindow>
+#include <QWidget>
+#include <QTimer>
+#include <QVulkanInstance>
+#include <QWidget>
+#include <QVBoxLayout>
 
 #include "../core/engine.h"
+#include "../gpu/vulkan_window.h"
 
 MainWindowVulkan::MainWindowVulkan(core::Engine* engine, QWidget* parent)
     : QMainWindow(parent)
     , m_engine(engine)
-    , m_vulkanWindow(nullptr)
     , m_centralWidget(nullptr)
     , m_layout(nullptr)
     , m_statusLabel(nullptr)
-    , m_retryButton(nullptr)
     , m_vulkanAvailable(false)
 {
-    setWindowTitle("Advanced Image Editor - Vulkan");
+    qDebug() << "MainWindowVulkan constructor starting...";
+    setWindowTitle("Advanced Image Editor - CPU Mode");
     resize(1024, 768);
     
     setupUI();
+    if (!attemptVulkan()) {
+        fallbackToCPU();
+    }
     
-#ifdef GPU_AVAILABLE
-    tryVulkan();
-#else
-    fallbackToCPU();
-#endif
+    qDebug() << "MainWindowVulkan constructor completed successfully";
 }
 
 MainWindowVulkan::~MainWindowVulkan()
 {
+    qDebug() << "MainWindowVulkan destructor called";
 }
 
 void MainWindowVulkan::setupUI()
 {
+    qDebug() << "Setting up UI...";
+    
     m_centralWidget = new QWidget(this);
     setCentralWidget(m_centralWidget);
     
     m_layout = new QVBoxLayout(m_centralWidget);
-    m_layout->setContentsMargins(0, 0, 0, 0);
+    m_layout->setContentsMargins(20, 20, 20, 20);
     
+    // Welcome label
+    QLabel* welcomeLabel = new QLabel("Advanced Image Editor", this);
+    welcomeLabel->setAlignment(Qt::AlignCenter);
+    welcomeLabel->setStyleSheet("QLabel { font-size: 24px; font-weight: bold; color: #2c3e50; padding: 20px; }");
+    m_layout->addWidget(welcomeLabel);
+    
+    // Status label
     m_statusLabel = new QLabel("Initializing...", this);
     m_statusLabel->setAlignment(Qt::AlignCenter);
-    m_statusLabel->setStyleSheet("QLabel { font-size: 16px; padding: 20px; }");
+    m_statusLabel->setStyleSheet("QLabel { font-size: 16px; color: #7f8c8d; padding: 10px; }");
     m_layout->addWidget(m_statusLabel);
     
-    m_retryButton = new QPushButton("Retry Vulkan", this);
-    m_retryButton->setVisible(false);
-    connect(m_retryButton, &QPushButton::clicked, this, &MainWindowVulkan::tryVulkan);
-    m_layout->addWidget(m_retryButton);
+    // Add some spacing
+    m_layout->addSpacing(20);
+    
+    // Info label
+    QLabel* infoLabel = new QLabel("This is a CPU-based image editor.\nGPU acceleration is not available.", this);
+    infoLabel->setAlignment(Qt::AlignCenter);
+    infoLabel->setStyleSheet("QLabel { font-size: 14px; color: #95a5a6; padding: 10px; }");
+    m_layout->addWidget(infoLabel);
+    
+    // Add stretch to push everything to the top
+    m_layout->addStretch();
+    
+    qDebug() << "UI setup completed";
 }
 
-void MainWindowVulkan::tryVulkan()
+bool MainWindowVulkan::attemptVulkan()
 {
-#ifdef GPU_AVAILABLE
     qDebug() << "Attempting to initialize Vulkan...";
-    
-    // Create Vulkan instance
-    QVulkanInstance* instance = new QVulkanInstance();
-    
-    // Enable validation layers in debug builds
-    QByteArrayList layers;
-    layers << "VK_LAYER_KHRONOS_validation";
-    instance->setLayers(layers);
-    
-    if (instance->create()) {
-        qDebug() << "Vulkan instance created successfully";
-        
-        // Create Vulkan window
-        m_vulkanWindow = new VulkanWindow(m_engine, nullptr);
-        m_vulkanWindow->setVulkanInstance(instance);
-        
-        // Embed the Vulkan window in a widget container
-        QWidget* vulkanContainer = QWidget::createWindowContainer(m_vulkanWindow, m_centralWidget);
-        
-        // Replace the status label with the Vulkan container
-        m_layout->removeWidget(m_statusLabel);
-        m_statusLabel->setVisible(false);
-        m_layout->addWidget(vulkanContainer);
-        
-        // Show the Vulkan window
-        m_vulkanWindow->show();
-        
-        m_vulkanAvailable = true;
-        onVulkanAvailable();
-        
-        qDebug() << "Vulkan rendering initialized successfully";
-        
-    } else {
-        qWarning() << "Failed to create Vulkan instance:" << instance->errorCode();
-        fallbackToCPU();
-    }
-#else
-    qDebug() << "GPU module not available, using CPU fallback";
-    fallbackToCPU();
+#if defined(QT_NO_OPENGL) // irrelevant but keep guards possible
 #endif
+    // Create Vulkan instance
+    m_vulkanInstance = new QVulkanInstance();
+#ifdef QT_DEBUG
+    m_vulkanInstance->setLayers({QStringLiteral("VK_LAYER_KHRONOS_validation")});
+#endif
+    if (!m_vulkanInstance->create()) {
+        qWarning() << "QVulkanInstance creation failed";
+        delete m_vulkanInstance;
+        m_vulkanInstance = nullptr;
+        return false;
+    }
+
+    // Create QVulkanWindow and wrap into a QWidget container
+    m_vulkanWindow = new VulkanWindow(m_engine);
+    m_vulkanWindow->setVulkanInstance(m_vulkanInstance);
+    QWidget* container = QWidget::createWindowContainer(m_vulkanWindow, this);
+    container->setMinimumSize(640, 480);
+    container->setFocusPolicy(Qt::StrongFocus);
+
+    // Replace central layout content to show Vulkan view prominently
+    m_layout->insertWidget(0, container, 1);
+    m_vulkanContainer = container;
+
+    m_statusLabel->setText("Vulkan mode active - Rendering");
+    m_statusLabel->setStyleSheet("QLabel { font-size: 16px; color: #3498db; padding: 10px; }");
+    m_vulkanAvailable = true;
+    return true;
 }
 
 void MainWindowVulkan::fallbackToCPU()
 {
+    qDebug() << "Using CPU fallback mode";
     m_vulkanAvailable = false;
     
-    // Remove any existing Vulkan window
-    if (m_vulkanWindow) {
-        m_layout->removeWidget(QWidget::createWindowContainer(m_vulkanWindow));
-        m_vulkanWindow->setVisible(false);
-        m_vulkanWindow = nullptr;
-    }
-    
     // Show fallback UI
-    m_statusLabel->setText("GPU acceleration not available - using CPU fallback");
-    m_statusLabel->setVisible(true);
-    
-#ifdef GPU_AVAILABLE
-    m_retryButton->setVisible(true);
-#endif
+    m_statusLabel->setText("CPU mode active - Ready for use");
+    m_statusLabel->setStyleSheet("QLabel { font-size: 16px; color: #27ae60; padding: 10px; }");
     
     onVulkanUnavailable();
 }
@@ -127,11 +127,11 @@ void MainWindowVulkan::fallbackToCPU()
 void MainWindowVulkan::onVulkanAvailable()
 {
     qDebug() << "Vulkan is now available";
-    // TODO: Enable GPU-accelerated features in the UI
+    // This should never be called in CPU-only mode
 }
 
 void MainWindowVulkan::onVulkanUnavailable()
 {
-    qDebug() << "GPU acceleration not available, using CPU fallback";
-    // TODO: Disable GPU-accelerated features in the UI
+    qDebug() << "Running in CPU mode - GPU acceleration not available";
+    // TODO: Initialize CPU-based image editing features
 }

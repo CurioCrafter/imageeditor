@@ -12,6 +12,7 @@
 #include <QFileInfo>
 #include <QImageReader>
 #include <QFile>
+#include "../core/layer.h"
 
 namespace ui {
 
@@ -56,13 +57,26 @@ CanvasView::~CanvasView()
 
 void CanvasView::setDocument(core::Document* document)
 {
+    // Disconnect from old document if any
+    if (m_document) {
+        disconnect(m_document, nullptr, this, nullptr);
+    }
     m_document = document;
     if (m_document) {
-        // Update scene size based on document
-        auto coreSize = m_document->getSize();
-        QSize docSize(coreSize.width(), coreSize.height());
+        // Connect to document change signals to refresh view
+        connect(m_document, &core::Document::layerAdded,        this, [this](int){ updateFromDocument(); });
+        connect(m_document, &core::Document::layerRemoved,      this, [this](int){ updateFromDocument(); });
+        connect(m_document, &core::Document::layerMoved,        this, [this](int, int){ updateFromDocument(); });
+        connect(m_document, &core::Document::layerChanged,      this, [this](int){ updateFromDocument(); });
+        connect(m_document, &core::Document::activeLayerChanged,this, [this](int){ updateFromDocument(); });
+        connect(m_document, &core::Document::documentChanged,   this, [this](){ updateFromDocument(); });
+        connect(m_document, &core::Document::sizeChanged,       this, [this](const QSize&){ updateFromDocument(); });
+
+        // Update scene rect
+        const QSize docSize = m_document->getSize();
         m_scene->setSceneRect(0, 0, docSize.width(), docSize.height());
         fitToView();
+        updateFromDocument();
     }
 }
 
@@ -104,6 +118,24 @@ void CanvasView::updateCanvasPixmap()
     m_scene->setSceneRect(m_canvasImage.rect());
 }
 
+void CanvasView::updateFromDocument()
+{
+    if (!m_document) return;
+    // Render the whole document using CPU composition for now
+    QImage rendered = m_document->render();
+    if (!rendered.isNull()) {
+        setCanvasImage(rendered);
+    }
+}
+
+core::RasterLayer* CanvasView::activeRasterLayer()
+{
+    if (!m_document) return nullptr;
+    auto active = m_document->getActiveLayer();
+    if (!active) return nullptr;
+    return dynamic_cast<core::RasterLayer*>(active.get());
+}
+
 void CanvasView::drawBrushStroke(const QPointF& from, const QPointF& to)
 {
     QPainter painter(&m_canvasImage);
@@ -125,7 +157,27 @@ void CanvasView::drawBrushStroke(const QPointF& from, const QPointF& to)
         painter.drawLine(from, to);
     }
     
-    // Update the pixmap and scene
+    // Persist stroke into active raster layer if available (layer position aware)
+    if (auto* layer = activeRasterLayer()) {
+        QImage layerImg = layer->getImage();
+        QPainter lp(&layerImg);
+        lp.setRenderHint(QPainter::Antialiasing, true);
+        QPen pen(m_brushColor);
+        pen.setWidth(m_brushSize);
+        pen.setCapStyle(Qt::RoundCap);
+        pen.setJoinStyle(Qt::RoundJoin);
+        lp.setPen(pen);
+        // Map scene coords to layer-local by subtracting layer position
+        QPointF lfrom = from - layer->getPosition();
+        QPointF lto   = to   - layer->getPosition();
+        if (lfrom == lto) {
+            lp.drawPoint(lfrom);
+        } else {
+            lp.drawLine(lfrom, lto);
+        }
+        lp.end();
+        layer->setImage(layerImg);
+    }
     updateCanvasPixmap();
 }
 
@@ -151,7 +203,27 @@ void CanvasView::drawEraserStroke(const QPointF& from, const QPointF& to)
         painter.drawLine(from, to);
     }
     
-    // Update the pixmap and scene
+    // Persist erase into active raster layer if available (layer position aware)
+    if (auto* layer = activeRasterLayer()) {
+        QImage layerImg = layer->getImage();
+        QPainter lp(&layerImg);
+        lp.setRenderHint(QPainter::Antialiasing, true);
+        lp.setCompositionMode(QPainter::CompositionMode_Clear);
+        QPen pen(Qt::transparent);
+        pen.setWidth(m_brushSize);
+        pen.setCapStyle(Qt::RoundCap);
+        pen.setJoinStyle(Qt::RoundJoin);
+        lp.setPen(pen);
+        QPointF lfrom = from - layer->getPosition();
+        QPointF lto   = to   - layer->getPosition();
+        if (lfrom == lto) {
+            lp.drawEllipse(lfrom, m_brushSize/2.0, m_brushSize/2.0);
+        } else {
+            lp.drawLine(lfrom, lto);
+        }
+        lp.end();
+        layer->setImage(layerImg);
+    }
     updateCanvasPixmap();
 }
 
@@ -346,11 +418,15 @@ void CanvasView::loadImageFile(const QString& filePath)
 
 void CanvasView::drawBackground(QPainter* painter, const QRectF& rect)
 {
-    // Fill with white background
-    painter->fillRect(rect, Qt::white);
-    
-    // Draw grid
-    drawGrid(painter, rect);
+    // Checkerboard background to visualize transparency
+    const int tile = 16;
+    QPixmap checker(tile * 2, tile * 2);
+    checker.fill(Qt::lightGray);
+    QPainter p(&checker);
+    p.fillRect(0, 0, tile, tile, Qt::white);
+    p.fillRect(tile, tile, tile, tile, Qt::white);
+    p.end();
+    painter->fillRect(rect, QBrush(checker));
 }
 
 void CanvasView::drawForeground(QPainter* painter, const QRectF& rect)

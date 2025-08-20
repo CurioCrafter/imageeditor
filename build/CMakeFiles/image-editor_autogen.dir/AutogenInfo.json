@@ -368,7 +368,15 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"C:/NewProject/src/crash_handler.h",
+			"MU",
+			"UVLADIE3JM/moc_crash_handler.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "C:/NewProject/build/image-editor_autogen/include",
 	"INCLUDE_DIR_Debug" : "C:/NewProject/build/image-editor_autogen/include_Debug",
@@ -541,6 +549,7 @@
 	"SETTINGS_FILE_Release" : "C:/NewProject/build/CMakeFiles/image-editor_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
+		[ "C:/NewProject/src/crash_handler.cpp", "MU", null ],
 		[ "C:/NewProject/src/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

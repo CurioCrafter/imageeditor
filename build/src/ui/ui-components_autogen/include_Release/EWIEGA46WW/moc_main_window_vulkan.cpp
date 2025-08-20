@@ -40,19 +40,16 @@ template <> constexpr inline auto MainWindowVulkan::qt_create_metaobjectdata<qt_
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "MainWindowVulkan",
-        "createNewDocument",
+        "onVulkanAvailable",
         "",
-        "openImage",
-        "saveImage"
+        "onVulkanUnavailable"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'createNewDocument'
+        // Slot 'onVulkanAvailable'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'openImage'
+        // Slot 'onVulkanUnavailable'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'saveImage'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -76,9 +73,8 @@ void MainWindowVulkan::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     auto *_t = static_cast<MainWindowVulkan *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->createNewDocument(); break;
-        case 1: _t->openImage(); break;
-        case 2: _t->saveImage(); break;
+        case 0: _t->onVulkanAvailable(); break;
+        case 1: _t->onVulkanUnavailable(); break;
         default: ;
         }
     }
@@ -104,14 +100,14 @@ int MainWindowVulkan::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 2;
     }
     return _id;
 }

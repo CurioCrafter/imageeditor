@@ -14,43 +14,31 @@
 	[
 		[
 			"C:/NewProject/src/core/brush_engine.h",
-			"Mu",
+			"MU",
 			"EWIEGA46WW/moc_brush_engine.cpp",
 			null
 		],
 		[
-			"C:/NewProject/src/core/command.h",
-			"Mu",
-			"EWIEGA46WW/moc_command.cpp",
-			null
-		],
-		[
 			"C:/NewProject/src/core/document.h",
-			"Mu",
+			"MU",
 			"EWIEGA46WW/moc_document.cpp",
 			null
 		],
 		[
 			"C:/NewProject/src/core/engine.h",
-			"Mu",
+			"MU",
 			"EWIEGA46WW/moc_engine.cpp",
 			null
 		],
 		[
-			"C:/NewProject/src/core/filter.h",
-			"Mu",
-			"EWIEGA46WW/moc_filter.cpp",
-			null
-		],
-		[
 			"C:/NewProject/src/core/layer.h",
-			"Mu",
+			"MU",
 			"EWIEGA46WW/moc_layer.cpp",
 			null
 		],
 		[
 			"C:/NewProject/src/core/tool.h",
-			"Mu",
+			"MU",
 			"EWIEGA46WW/moc_tool.cpp",
 			null
 		]
@@ -73,7 +61,6 @@
 		"QT_CORE_LIB",
 		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
-		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"VK_USE_PLATFORM_WIN32_KHR",
 		"WIN32",
@@ -90,7 +77,6 @@
 		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
 		"QT_NO_DEBUG",
-		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"VK_USE_PLATFORM_WIN32_KHR",
 		"WIN32",
@@ -107,7 +93,6 @@
 		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
 		"QT_NO_DEBUG",
-		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"VK_USE_PLATFORM_WIN32_KHR",
 		"WIN32",
@@ -124,7 +109,6 @@
 		"QT_DISABLE_DEPRECATED_BEFORE=0x060000",
 		"QT_GUI_LIB",
 		"QT_NO_DEBUG",
-		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"VK_USE_PLATFORM_WIN32_KHR",
 		"WIN32",
@@ -149,8 +133,7 @@
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
-		"C:/VulkanSDK/1.4.321.1/include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets"
+		"C:/VulkanSDK/1.4.321.1/include"
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
@@ -159,8 +142,7 @@
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
-		"C:/VulkanSDK/1.4.321.1/include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets"
+		"C:/VulkanSDK/1.4.321.1/include"
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
@@ -169,8 +151,7 @@
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
-		"C:/VulkanSDK/1.4.321.1/include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets"
+		"C:/VulkanSDK/1.4.321.1/include"
 	],
 	"MOC_INCLUDES_Release" : 
 	[
@@ -179,8 +160,7 @@
 		"C:/Qt/6.9.1/msvc2022_64/include",
 		"C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc",
 		"C:/Qt/6.9.1/msvc2022_64/include/QtGui",
-		"C:/VulkanSDK/1.4.321.1/include",
-		"C:/Qt/6.9.1/msvc2022_64/include/QtWidgets"
+		"C:/VulkanSDK/1.4.321.1/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -210,6 +190,10 @@
 	"QT_MOC_EXECUTABLE_RelWithDebInfo" : "C:/Qt/6.9.1/msvc2022_64/bin/moc.exe",
 	"QT_MOC_EXECUTABLE_Release" : "C:/Qt/6.9.1/msvc2022_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "",
+	"QT_UIC_EXECUTABLE_Debug" : "C:/Qt/6.9.1/msvc2022_64/bin/uic.exe",
+	"QT_UIC_EXECUTABLE_MinSizeRel" : "C:/Qt/6.9.1/msvc2022_64/bin/uic.exe",
+	"QT_UIC_EXECUTABLE_RelWithDebInfo" : "C:/Qt/6.9.1/msvc2022_64/bin/uic.exe",
+	"QT_UIC_EXECUTABLE_Release" : "C:/Qt/6.9.1/msvc2022_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
 	"SETTINGS_FILE" : "C:/NewProject/build/src/core/CMakeFiles/core-engine_autogen.dir/AutogenUsed.txt",
@@ -219,13 +203,16 @@
 	"SETTINGS_FILE_Release" : "C:/NewProject/build/src/core/CMakeFiles/core-engine_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
-		[ "C:/NewProject/src/core/brush_engine.cpp", "Mu", null ],
-		[ "C:/NewProject/src/core/command.cpp", "Mu", null ],
-		[ "C:/NewProject/src/core/document.cpp", "Mu", null ],
-		[ "C:/NewProject/src/core/engine.cpp", "Mu", null ],
-		[ "C:/NewProject/src/core/layer.cpp", "Mu", null ],
-		[ "C:/NewProject/src/core/tool.cpp", "Mu", null ]
+		[ "C:/NewProject/src/core/brush_engine.cpp", "MU", null ],
+		[ "C:/NewProject/src/core/document.cpp", "MU", null ],
+		[ "C:/NewProject/src/core/engine.cpp", "MU", null ],
+		[ "C:/NewProject/src/core/layer.cpp", "MU", null ],
+		[ "C:/NewProject/src/core/tool.cpp", "MU", null ]
 	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0
 }

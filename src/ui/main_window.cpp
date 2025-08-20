@@ -64,8 +64,19 @@ MainWindow::~MainWindow()
 void MainWindow::setEngine(core::Engine* engine)
 {
     m_engine = engine;
-    if (m_canvasView) {
-        // TODO: Connect canvas view to engine
+    if (m_canvasView && m_engine && m_engine->getCurrentDocument()) {
+        m_canvasView->setDocument(m_engine->getCurrentDocument().get());
+    }
+    if (m_layerPanel && m_engine && m_engine->getCurrentDocument()) {
+        m_layerPanel->setDocument(m_engine->getCurrentDocument().get());
+    }
+
+    // Keep canvas synced with document changes
+    if (m_engine && m_engine->getCurrentDocument() && m_canvasView) {
+        auto doc = m_engine->getCurrentDocument();
+        connect(doc.get(), &core::Document::documentChanged, this, [this, doc]() {
+            if (m_canvasView) m_canvasView->setDocument(doc.get());
+        });
     }
 }
 
@@ -276,8 +287,9 @@ void MainWindow::setupConnections()
     // Connect layer panel to canvas view
     if (m_layerPanel && m_canvasView) {
         connect(m_layerPanel, &LayerPanel::layerSelectionChanged, this, [this](int layerIndex) {
-            // TODO: Set active layer in canvas view
-            qDebug() << "Layer selected:" << layerIndex;
+            if (!m_engine || !m_engine->getCurrentDocument()) return;
+            m_engine->getCurrentDocument()->setActiveLayer(layerIndex);
+            if (m_canvasView) m_canvasView->setDocument(m_engine->getCurrentDocument().get());
         });
     }
     

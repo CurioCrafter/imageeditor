@@ -17,6 +17,7 @@ Document::Document(int width, int height, QObject* parent)
     // Create default background layer
     auto background = std::make_shared<RasterLayer>(width, height, "Background");
     background->fill(Qt::white);
+    background->setFlags(LayerFlags::NonDeletable);
     addLayer(background);
     
     m_createdDate = QDateTime::currentDateTime();
@@ -30,18 +31,19 @@ void Document::addLayer(LayerPtr layer, int index)
     if (!layer) return;
     
     if (index < 0 || index > static_cast<int>(m_layers.size())) {
+        // Append on top by default
         m_layers.push_back(layer);
     } else {
         m_layers.insert(m_layers.begin() + index, layer);
     }
     
-    if (!m_activeLayer) {
-        m_activeLayer = layer;
-    }
+    // New layers become active
+    m_activeLayer = layer;
     
     invalidateCache();
     updateModifiedDate();
     emit layerAdded(m_layers.size() - 1);
+    emit documentChanged();
 }
 
 void Document::removeLayer(int index)
@@ -49,20 +51,27 @@ void Document::removeLayer(int index)
     if (index < 0 || index >= static_cast<int>(m_layers.size())) return;
     
     auto layer = m_layers[index];
+    // Prevent removing non-deletable background
+    if (layer && layer->isNonDeletable()) {
+        qWarning() << "Attempt to delete non-deletable layer prevented";
+        return;
+    }
     if (layer == m_activeLayer) {
         m_activeLayer = nullptr;
     }
     
     m_layers.erase(m_layers.begin() + index);
     
-    // Set new active layer if needed
+    // Set new active layer: prefer the next above, else below
     if (!m_activeLayer && !m_layers.empty()) {
-        m_activeLayer = m_layers.back();
+        int pick = std::min(index, static_cast<int>(m_layers.size()) - 1);
+        m_activeLayer = m_layers[pick];
     }
     
     invalidateCache();
     updateModifiedDate();
     emit layerRemoved(index);
+    emit documentChanged();
 }
 
 void Document::moveLayer(int from, int to)

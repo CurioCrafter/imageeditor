@@ -4,10 +4,13 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QLabel>
-#include <QPushButton>
+#include <memory>
+
+class QVulkanInstance;
+class QWidget;
+class VulkanWindow;
 
 namespace core { class Engine; }
-class VulkanWindow;
 
 class MainWindowVulkan : public QMainWindow
 {
@@ -23,15 +26,16 @@ private slots:
 
 private:
     void setupUI();
-    void tryVulkan();
     void fallbackToCPU();
+    bool attemptVulkan();
 
     core::Engine* m_engine;
-    VulkanWindow* m_vulkanWindow;
     QWidget* m_centralWidget;
     QVBoxLayout* m_layout;
     QLabel* m_statusLabel;
-    QPushButton* m_retryButton;
+    QWidget* m_vulkanContainer = nullptr;
+    QVulkanInstance* m_vulkanInstance = nullptr;
+    VulkanWindow* m_vulkanWindow = nullptr;
     
     bool m_vulkanAvailable;
 };

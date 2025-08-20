@@ -31,7 +31,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 # Build options
 option(BUILD_UI "Build user interface components" ON)
-option(BUILD_GPU "Build GPU acceleration components" OFF)  # Temporarily disabled due to MOC issues
+option(BUILD_GPU "Build GPU acceleration components" ON)
 option(BUILD_AI "Build AI integration components" OFF)
 option(BUILD_PLUGINS "Build plugin system" OFF)
 option(BUILD_TESTS "Build test suite" OFF)
@@ -107,7 +107,11 @@ endif()
 add_subdirectory(src/tools)
 
 # Create main executable using Qt's helper function
-qt_add_executable(image-editor src/main.cpp)
+qt_add_executable(image-editor
+    src/main.cpp
+    src/crash_handler.cpp
+    src/crash_handler.h
+)
 
 # Set properties
 set_target_properties(image-editor PROPERTIES
@@ -118,6 +122,11 @@ set_target_properties(image-editor PROPERTIES
 # Link libraries - ui-components already links to gpu-acceleration and core-engine
 if(BUILD_UI)
     target_link_libraries(image-editor PRIVATE ui-components)
+endif()
+
+# Link Windows crash dump libraries when building on Windows
+if(WIN32)
+    target_link_libraries(image-editor PRIVATE Dbghelp Shlwapi)
 endif()
 
 # Print configuration summary

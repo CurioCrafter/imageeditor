@@ -16,6 +16,15 @@
 #include <vector>
 
 namespace core {
+// Layer flags for special behavior
+enum class LayerFlags : unsigned int {
+    None = 0,
+    NonDeletable = 1u << 0
+};
+
+inline bool hasFlag(LayerFlags flags, LayerFlags flag) {
+    return (static_cast<unsigned int>(flags) & static_cast<unsigned int>(flag)) != 0u;
+}
 
 // Forward declarations
 class Document;
@@ -148,6 +157,11 @@ public:
     void setBlendMode(BlendMode mode);
     
     LayerType getType() const { return m_type; }
+
+    // Flags
+    void setFlags(LayerFlags flags) { m_flags = flags; }
+    LayerFlags getFlags() const { return m_flags; }
+    bool isNonDeletable() const { return hasFlag(m_flags, LayerFlags::NonDeletable); }
     
     // Hierarchy
     void addChild(std::shared_ptr<Layer> child);
@@ -213,6 +227,7 @@ protected:
     
     LayerMask m_mask;
     LayerEffects m_effects;
+    LayerFlags m_flags{LayerFlags::None};
     
     QDateTime m_createdDate;
     QDateTime m_modifiedDate;
