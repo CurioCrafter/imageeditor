@@ -142,6 +142,7 @@ C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QAction \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qaction.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qbitmap.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qbrush.h \
@@ -173,8 +174,11 @@ C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QColorDialog \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QDockWidget \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QFileDialog \
+  C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QFrame \
+  C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QLabel \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QMenu \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QMenuBar \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QPushButton \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QSlider \

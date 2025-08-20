@@ -19,6 +19,18 @@
 			null
 		],
 		[
+			"C:/NewProject/src/core/command.h",
+			"Mu",
+			"EWIEGA46WW/moc_command.cpp",
+			null
+		],
+		[
+			"C:/NewProject/src/core/document.h",
+			"Mu",
+			"EWIEGA46WW/moc_document.cpp",
+			null
+		],
+		[
 			"C:/NewProject/src/core/engine.h",
 			"Mu",
 			"EWIEGA46WW/moc_engine.cpp",
@@ -28,6 +40,12 @@
 			"C:/NewProject/src/core/filter.h",
 			"Mu",
 			"EWIEGA46WW/moc_filter.cpp",
+			null
+		],
+		[
+			"C:/NewProject/src/core/layer.h",
+			"Mu",
+			"EWIEGA46WW/moc_layer.cpp",
 			null
 		],
 		[
@@ -202,7 +220,10 @@
 	"SOURCES" : 
 	[
 		[ "C:/NewProject/src/core/brush_engine.cpp", "Mu", null ],
+		[ "C:/NewProject/src/core/command.cpp", "Mu", null ],
+		[ "C:/NewProject/src/core/document.cpp", "Mu", null ],
 		[ "C:/NewProject/src/core/engine.cpp", "Mu", null ],
+		[ "C:/NewProject/src/core/layer.cpp", "Mu", null ],
 		[ "C:/NewProject/src/core/tool.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : true,

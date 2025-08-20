@@ -44,7 +44,13 @@ template <> constexpr inline auto ui::CanvasWidget::qt_create_metaobjectdata<qt_
         "Eraser",
         "Line",
         "Rectangle",
-        "Ellipse"
+        "Ellipse",
+        "Selection",
+        "Lasso",
+        "MagicWand",
+        "Move",
+        "Zoom",
+        "Pan"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -59,6 +65,12 @@ template <> constexpr inline auto ui::CanvasWidget::qt_create_metaobjectdata<qt_
             {    4, ToolType::Line },
             {    5, ToolType::Rectangle },
             {    6, ToolType::Ellipse },
+            {    7, ToolType::Selection },
+            {    8, ToolType::Lasso },
+            {    9, ToolType::MagicWand },
+            {   10, ToolType::Move },
+            {   11, ToolType::Zoom },
+            {   12, ToolType::Pan },
         }),
     };
     return QtMocHelpers::metaObjectData<CanvasWidget, qt_meta_tag_ZN2ui12CanvasWidgetE_t>(QMC::MetaObjectFlag{}, qt_stringData,

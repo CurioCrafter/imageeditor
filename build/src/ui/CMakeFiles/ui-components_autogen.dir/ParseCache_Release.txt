@@ -1336,6 +1336,7 @@ C:/NewProject/src/ui/main_window_vulkan.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/QAction
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qaction.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qbitmap.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtGui/qbrush.h
@@ -1367,8 +1368,11 @@ C:/NewProject/src/ui/main_window_vulkan.h
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QColorDialog
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QDockWidget
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QFileDialog
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QFrame
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QHBoxLayout
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QLabel
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QMainWindow
+ mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QMenu
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QMenuBar
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QSlider

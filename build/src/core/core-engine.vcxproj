@@ -376,10 +376,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\NewProject\src\core\brush_engine.cpp" />
     <ClCompile Include="C:\NewProject\src\core\engine.cpp" />
     <ClCompile Include="C:\NewProject\src\core\tool.cpp" />
+    <ClCompile Include="C:\NewProject\src\core\document.cpp" />
+    <ClCompile Include="C:\NewProject\src\core\command.cpp" />
+    <ClCompile Include="C:\NewProject\src\core\layer.cpp" />
     <ClInclude Include="C:\NewProject\src\core\brush_engine.h" />
     <ClInclude Include="C:\NewProject\src\core\engine.h" />
     <ClInclude Include="C:\NewProject\src\core\filter.h" />
     <ClInclude Include="C:\NewProject\src\core\tool.h" />
+    <ClInclude Include="C:\NewProject\src\core\document.h" />
+    <ClInclude Include="C:\NewProject\src\core\command.h" />
+    <ClInclude Include="C:\NewProject\src\core\layer.h" />
     <ClCompile Include="C:\NewProject\build\src\core\core-engine_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
