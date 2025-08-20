@@ -1,4 +1,4 @@
-C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_main_window.cpp: C:/Users/andre/Desktop/NewProject/src/ui/main_window.h \
+C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_main_window.cpp: C:/NewProject/src/ui/main_window.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \

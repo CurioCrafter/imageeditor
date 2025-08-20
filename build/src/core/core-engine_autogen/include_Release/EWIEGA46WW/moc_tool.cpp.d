@@ -1,4 +1,4 @@
-C:/Users/andre/Desktop/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_tool.cpp: C:/Users/andre/Desktop/NewProject/src/core/tool.h \
+C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_tool.cpp: C:/NewProject/src/core/tool.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPointF \

@@ -2,11 +2,13 @@
 
 # Only build if GPU is enabled
 if(BUILD_GPU)
-    # Create GPU acceleration library
-    add_library(gpu-acceleration STATIC
+    # Use Qt's helper function to create the library with proper MOC support
+    qt_add_library(gpu-acceleration STATIC
         # Vulkan renderer source files
         vulkan_renderer.cpp
+        vulkan_renderer.h
         vulkan_window.cpp
+        vulkan_window.h
         vulkan_shader.cpp
         vulkan_texture.cpp
         vulkan_buffer.cpp
@@ -26,10 +28,10 @@ if(BUILD_GPU)
     set_target_properties(gpu-acceleration PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
-        AUTOMOC ON
-        AUTOUIC ON
-        AUTORCC ON
     )
+    
+    # Enable verbose autogen output for this target
+    set_property(TARGET gpu-acceleration PROPERTY AUTOGEN_VERBOSE ON)
     
     # Include directories
     target_include_directories(gpu-acceleration PUBLIC
@@ -38,23 +40,23 @@ if(BUILD_GPU)
     )
     
     # Link Qt6 libraries (required for QVulkanWindow, QVulkanInstance)
-    target_link_libraries(gpu-acceleration Qt6::Gui)
+    target_link_libraries(gpu-acceleration
+        PUBLIC Qt6::Gui        # QVulkanWindow lives here
+        PRIVATE core-engine    # if the renderer needs access to core-engine
+    )
     
     # Link GPU libraries - prefer Vulkan, fallback to OpenGL
     if(Vulkan_FOUND)
-        target_link_libraries(gpu-acceleration Vulkan::Vulkan)
+        target_link_libraries(gpu-acceleration PRIVATE Vulkan::Vulkan)
         target_compile_definitions(gpu-acceleration PRIVATE VULKAN_AVAILABLE=1)
         message(STATUS "GPU: Vulkan support enabled")
     endif()
     
     if(OpenGL_FOUND)
-        target_link_libraries(gpu-acceleration OpenGL::GL)
+        target_link_libraries(gpu-acceleration PRIVATE OpenGL::GL)
         target_compile_definitions(gpu-acceleration PRIVATE OPENGL_AVAILABLE=1)
         message(STATUS "GPU: OpenGL support enabled")
     endif()
-    
-    # Link core engine
-    target_link_libraries(gpu-acceleration core-engine)
     
     # Add Vulkan/MSVC compatibility definitions for Windows
     if(WIN32)

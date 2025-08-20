@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DCFE808D-FA78-3A09-839C-FB0DAE0FD0BE}</ProjectGuid>
+    <ProjectGuid>{823A8401-473E-3072-9F02-D5F8EC5DAD17}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,27 +59,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\andre\Desktop\NewProject\build\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NewProject\build\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gpu-acceleration.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gpu-acceleration</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\andre\Desktop\NewProject\build\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NewProject\build\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gpu-acceleration.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gpu-acceleration</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\andre\Desktop\NewProject\build\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\NewProject\build\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gpu-acceleration.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gpu-acceleration</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\andre\Desktop\NewProject\build\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\NewProject\build\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gpu-acceleration.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gpu-acceleration</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/Include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Debug;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -103,41 +103,24 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;VULKAN_AVAILABLE=1;OPENGL_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_GUI_LIB;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Debug;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Debug;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target gpu-acceleration</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\gpu
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/gpu-acceleration_autogen.dir/AutogenInfo.json Debug
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/Include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Release;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -162,41 +145,24 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VULKAN_AVAILABLE=1;OPENGL_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Release;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_Release;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target gpu-acceleration</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\gpu
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/gpu-acceleration_autogen.dir/AutogenInfo.json Release
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/Include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_MinSizeRel;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -221,41 +187,24 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VULKAN_AVAILABLE=1;OPENGL_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_MinSizeRel;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_MinSizeRel;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target gpu-acceleration</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\gpu
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/gpu-acceleration_autogen.dir/AutogenInfo.json MinSizeRel
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/Include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_RelWithDebInfo;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -279,25 +228,27 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VULKAN_AVAILABLE=1;OPENGL_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_RelWithDebInfo;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\gpu;C:\Users\andre\Desktop\NewProject\src\gpu\..;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\gpu\gpu-acceleration_autogen\include_RelWithDebInfo;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target gpu-acceleration</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\gpu
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\NewProject\build\CMakeFiles\9eabbe20301f789ab75efc2c46aa591e\qt6gpu-acceleration_metatypes.json.gen.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running moc --collect-json for target gpu-acceleration</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen --collect-json @C:/NewProject/build/src/gpu/meta_types/gpu-acceleration_json_file_list.txt
 if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/gpu-acceleration_autogen.dir/AutogenInfo.json RelWithDebInfo
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -305,17 +256,62 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
-    <Lib>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-    </Lib>
-  </ItemDefinitionGroup>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\gpu\meta_types\gpu-acceleration_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NewProject\build\src\gpu\meta_types\qt6gpu-acceleration_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running moc --collect-json for target gpu-acceleration</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen --collect-json @C:/NewProject/build/src/gpu/meta_types/gpu-acceleration_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\gpu\meta_types\gpu-acceleration_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NewProject\build\src\gpu\meta_types\qt6gpu-acceleration_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running moc --collect-json for target gpu-acceleration</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen --collect-json @C:/NewProject/build/src/gpu/meta_types/gpu-acceleration_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\gpu\meta_types\gpu-acceleration_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\NewProject\build\src\gpu\meta_types\qt6gpu-acceleration_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running moc --collect-json for target gpu-acceleration</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen --collect-json @C:/NewProject/build/src/gpu/meta_types/gpu-acceleration_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json.gen C:/NewProject/build/src/gpu/meta_types/qt6gpu-acceleration_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\gpu\meta_types\gpu-acceleration_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\NewProject\build\src\gpu\meta_types\qt6gpu-acceleration_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\andre\Desktop\NewProject\src\gpu\CMakeLists.txt">
+    <CustomBuild Include="C:\NewProject\src\gpu\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/gpu/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/NewProject/src/gpu/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/gpu/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -324,11 +320,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\andre\Desktop\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/gpu/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/NewProject/src/gpu/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/gpu/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -337,11 +333,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\andre\Desktop\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/gpu/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/NewProject/src/gpu/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/gpu/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -350,11 +346,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\andre\Desktop\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/gpu/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/NewProject/src/gpu/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/gpu/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/gpu/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -363,40 +359,45 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\andre\Desktop\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\NewProject\build\src\gpu\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_Debug.cpp">
+    <ClCompile Include="C:\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_Debug.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_renderer.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_window.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_shader.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_texture.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_buffer.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_command_pool.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\vulkan_sync.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\opengl_renderer.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\opengl_shader.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\opengl_texture.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\gpu_utils.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\render_target.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\gpu\shader_manager.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_Release.cpp">
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_renderer.cpp" />
+    <ClInclude Include="C:\NewProject\src\gpu\vulkan_renderer.h" />
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_window.cpp" />
+    <ClInclude Include="C:\NewProject\src\gpu\vulkan_window.h" />
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_shader.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_texture.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_buffer.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_command_pool.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\vulkan_sync.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\opengl_renderer.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\opengl_shader.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\opengl_texture.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\gpu_utils.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\render_target.cpp" />
+    <ClCompile Include="C:\NewProject\src\gpu\shader_manager.cpp" />
+    <ClInclude Include="C:\NewProject\build\src\gpu\ddf_gpu_acceleration.h" />
+    <None Include="C:\NewProject\build\src\gpu\meta_types\qt6gpu-acceleration_metatypes.json.gen">
+    </None>
+    <ClCompile Include="C:\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_MinSizeRel.cpp">
+    <ClCompile Include="C:\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_MinSizeRel.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_RelWithDebInfo.cpp">
+    <ClCompile Include="C:\NewProject\build\src\gpu\gpu-acceleration_autogen\mocs_compilation_RelWithDebInfo.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
@@ -404,15 +405,27 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\andre\Desktop\NewProject\build\ZERO_CHECK.vcxproj">
-      <Project>{C07039F3-4D4E-3B45-9DEF-0771105902B5}</Project>
+    <ProjectReference Include="C:\NewProject\build\ZERO_CHECK.vcxproj">
+      <Project>{29BA7636-049C-309E-A1EA-C5D97A8AB4E3}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.vcxproj">
-      <Project>{E56C354B-8928-3D83-A7DF-CFFEF496B71A}</Project>
+    <ProjectReference Include="C:\NewProject\build\src\core\core-engine.vcxproj">
+      <Project>{6A8255C9-E495-30FF-B85A-1B052FAABE88}</Project>
       <Name>core-engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\NewProject\build\src\gpu\gpu-acceleration_autogen.vcxproj">
+      <Project>{61A9E3F7-F59F-3CB4-BCF7-60F0CCB84D5F}</Project>
+      <Name>gpu-acceleration_autogen</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\NewProject\build\src\gpu\gpu-acceleration_automoc_json_extraction.vcxproj">
+      <Project>{FC403A67-E175-3412-BEB0-F8288B517042}</Project>
+      <Name>gpu-acceleration_automoc_json_extraction</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

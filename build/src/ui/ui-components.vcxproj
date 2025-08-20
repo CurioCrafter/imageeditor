@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{836656F6-0022-30E8-BF23-7AB47D8F6EED}</ProjectGuid>
+    <ProjectGuid>{923827D1-2D4B-3498-8CA3-689C1A4586C0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,27 +59,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\andre\Desktop\NewProject\build\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NewProject\build\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui-components.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui-components</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\andre\Desktop\NewProject\build\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NewProject\build\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui-components.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui-components</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\andre\Desktop\NewProject\build\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\NewProject\build\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ui-components.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ui-components</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\andre\Desktop\NewProject\build\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\NewProject\build\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ui-components.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ui-components</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -97,47 +97,30 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_Debug;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target ui-components</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\ui
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/ui-components_autogen.dir/AutogenInfo.json Debug
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -154,49 +137,32 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_Release;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target ui-components</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\ui
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/ui-components_autogen.dir/AutogenInfo.json Release
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -213,49 +179,32 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_MinSizeRel;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target ui-components</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\ui
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/ui-components_autogen.dir/AutogenInfo.json MinSizeRel
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/Include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtConcurrent" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets" /external:I "C:/Qt/6.9.1/msvc2022_64/include" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.1/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.1/msvc2022_64/include/QtGui" /external:I "C:/VulkanSDK/1.4.321.1/include" /Zc:__cplusplus -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ConformanceMode>true</ConformanceMode>
@@ -273,31 +222,33 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_OPENGLWIDGETS_LIB;QT_CONCURRENT_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GPU_AVAILABLE=1;VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;NOMINMAX;QT_DISABLE_DEPRECATED_BEFORE=0x060000;QT_WIDGETS_LIB;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\Users\andre\Desktop\NewProject\src\ui;C:\Users\andre\Desktop\NewProject\src\ui\..\core;C:\Users\andre\Desktop\NewProject\src\core;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\Include;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGL;C:\Qt\6.9.1\msvc2022_64\include\QtOpenGLWidgets;C:\Qt\6.9.1\msvc2022_64\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\NewProject\build\src\ui\ui-components_autogen\include_RelWithDebInfo;C:\NewProject\src\ui;C:\NewProject\src\ui\..\core;C:\NewProject\src\core;C:\NewProject\src\gpu;C:\NewProject\src\gpu\..;C:\Qt\6.9.1\msvc2022_64\include\QtWidgets;C:\Qt\6.9.1\msvc2022_64\include;C:\Qt\6.9.1\msvc2022_64\include\QtCore;C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.1\msvc2022_64\include\QtGui;C:\VulkanSDK\1.4.321.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <PreBuildEvent>
-      <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message>Automatic MOC and UIC for target ui-components</Message>
-      <Command>setlocal
-cd C:\Users\andre\Desktop\NewProject\build\src\ui
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\NewProject\build\CMakeFiles\06f3baf978995e223a8459b51665aeb6\qt6ui-components_metatypes.json.gen.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running moc --collect-json for target ui-components</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen --collect-json @C:/NewProject/build/src/ui/meta_types/ui-components_json_file_list.txt
 if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/ui-components_autogen.dir/AutogenInfo.json RelWithDebInfo
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -305,17 +256,62 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-    </PreBuildEvent>
-    <Lib>
-      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-    </Lib>
-  </ItemDefinitionGroup>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\ui\meta_types\ui-components_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NewProject\build\src\ui\meta_types\qt6ui-components_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running moc --collect-json for target ui-components</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen --collect-json @C:/NewProject/build/src/ui/meta_types/ui-components_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\ui\meta_types\ui-components_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NewProject\build\src\ui\meta_types\qt6ui-components_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running moc --collect-json for target ui-components</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen --collect-json @C:/NewProject/build/src/ui/meta_types/ui-components_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\ui\meta_types\ui-components_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\NewProject\build\src\ui\meta_types\qt6ui-components_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running moc --collect-json for target ui-components</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen --collect-json @C:/NewProject/build/src/ui/meta_types/ui-components_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\6.9.1\msvc2022_64\bin\moc.exe;C:\NewProject\build\src\ui\meta_types\ui-components_json_file_list.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\NewProject\build\src\ui\meta_types\qt6ui-components_metatypes.json.gen</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\andre\Desktop\NewProject\src\ui\CMakeLists.txt">
+    <CustomBuild Include="C:\NewProject\src\ui\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/ui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/NewProject/src/ui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/ui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -324,11 +320,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\andre\Desktop\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/ui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/NewProject/src/ui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/ui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -337,11 +333,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\andre\Desktop\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/ui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/NewProject/src/ui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/ui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -350,11 +346,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\andre\Desktop\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/andre/Desktop/NewProject/src/ui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/NewProject/src/ui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/ui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -363,35 +359,46 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\andre\Desktop\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\NewProject\build\src\ui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_Debug.cpp">
+    <ClCompile Include="C:\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_Debug.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\main_window.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\main_window_vulkan.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\canvas_view.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\canvas_widget.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\layer_panel.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\tool_panel.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\color_panel.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\src\ui\brush_panel.cpp" />
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_Release.cpp">
+    <ClCompile Include="C:\NewProject\src\ui\main_window.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\main_window.h" />
+    <ClCompile Include="C:\NewProject\src\ui\main_window_vulkan.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\main_window_vulkan.h" />
+    <ClCompile Include="C:\NewProject\src\ui\canvas_view.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\canvas_view.h" />
+    <ClCompile Include="C:\NewProject\src\ui\canvas_widget.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\canvas_widget.h" />
+    <ClCompile Include="C:\NewProject\src\ui\layer_panel.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\layer_panel.h" />
+    <ClCompile Include="C:\NewProject\src\ui\tool_panel.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\tool_panel.h" />
+    <ClCompile Include="C:\NewProject\src\ui\color_panel.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\color_panel.h" />
+    <ClCompile Include="C:\NewProject\src\ui\brush_panel.cpp" />
+    <ClInclude Include="C:\NewProject\src\ui\brush_panel.h" />
+    <ClInclude Include="C:\NewProject\build\src\ui\ddf_ui_components.h" />
+    <None Include="C:\NewProject\build\src\ui\meta_types\qt6ui-components_metatypes.json.gen">
+    </None>
+    <ClCompile Include="C:\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_MinSizeRel.cpp">
+    <ClCompile Include="C:\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_MinSizeRel.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Users\andre\Desktop\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_RelWithDebInfo.cpp">
+    <ClCompile Include="C:\NewProject\build\src\ui\ui-components_autogen\mocs_compilation_RelWithDebInfo.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
@@ -399,15 +406,31 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\andre\Desktop\NewProject\build\ZERO_CHECK.vcxproj">
-      <Project>{C07039F3-4D4E-3B45-9DEF-0771105902B5}</Project>
+    <ProjectReference Include="C:\NewProject\build\ZERO_CHECK.vcxproj">
+      <Project>{29BA7636-049C-309E-A1EA-C5D97A8AB4E3}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.vcxproj">
-      <Project>{E56C354B-8928-3D83-A7DF-CFFEF496B71A}</Project>
+    <ProjectReference Include="C:\NewProject\build\src\core\core-engine.vcxproj">
+      <Project>{6A8255C9-E495-30FF-B85A-1B052FAABE88}</Project>
       <Name>core-engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\NewProject\build\src\gpu\gpu-acceleration.vcxproj">
+      <Project>{823A8401-473E-3072-9F02-D5F8EC5DAD17}</Project>
+      <Name>gpu-acceleration</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\NewProject\build\src\ui\ui-components_autogen.vcxproj">
+      <Project>{4B1074A7-4E0E-3DD0-8B05-443B165FEF73}</Project>
+      <Name>ui-components_autogen</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\NewProject\build\src\ui\ui-components_automoc_json_extraction.vcxproj">
+      <Project>{E5103BA5-DAAB-34C1-86B3-3E6E0B9254F8}</Project>
+      <Name>ui-components_automoc_json_extraction</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

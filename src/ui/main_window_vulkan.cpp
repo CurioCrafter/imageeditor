@@ -3,7 +3,12 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QDebug>
+
+// Only include GPU headers when GPU module is available
+#ifdef GPU_AVAILABLE
 #include "../gpu/vulkan_window.h"
+#endif
+
 #include "../core/engine.h"
 
 MainWindowVulkan::MainWindowVulkan(core::Engine* engine, QWidget* parent)
@@ -20,7 +25,12 @@ MainWindowVulkan::MainWindowVulkan(core::Engine* engine, QWidget* parent)
     resize(1024, 768);
     
     setupUI();
+    
+#ifdef GPU_AVAILABLE
     tryVulkan();
+#else
+    fallbackToCPU();
+#endif
 }
 
 MainWindowVulkan::~MainWindowVulkan()
@@ -35,7 +45,7 @@ void MainWindowVulkan::setupUI()
     m_layout = new QVBoxLayout(m_centralWidget);
     m_layout->setContentsMargins(0, 0, 0, 0);
     
-    m_statusLabel = new QLabel("Initializing Vulkan...", this);
+    m_statusLabel = new QLabel("Initializing...", this);
     m_statusLabel->setAlignment(Qt::AlignCenter);
     m_statusLabel->setStyleSheet("QLabel { font-size: 16px; padding: 20px; }");
     m_layout->addWidget(m_statusLabel);
@@ -48,6 +58,7 @@ void MainWindowVulkan::setupUI()
 
 void MainWindowVulkan::tryVulkan()
 {
+#ifdef GPU_AVAILABLE
     qDebug() << "Attempting to initialize Vulkan...";
     
     // Create Vulkan instance
@@ -85,6 +96,10 @@ void MainWindowVulkan::tryVulkan()
         qWarning() << "Failed to create Vulkan instance:" << instance->errorCode();
         fallbackToCPU();
     }
+#else
+    qDebug() << "GPU module not available, using CPU fallback";
+    fallbackToCPU();
+#endif
 }
 
 void MainWindowVulkan::fallbackToCPU()
@@ -99,10 +114,12 @@ void MainWindowVulkan::fallbackToCPU()
     }
     
     // Show fallback UI
-    m_statusLabel->setText("Vulkan not available - using CPU fallback");
+    m_statusLabel->setText("GPU acceleration not available - using CPU fallback");
     m_statusLabel->setVisible(true);
     
+#ifdef GPU_AVAILABLE
     m_retryButton->setVisible(true);
+#endif
     
     onVulkanUnavailable();
 }
@@ -115,6 +132,6 @@ void MainWindowVulkan::onVulkanAvailable()
 
 void MainWindowVulkan::onVulkanUnavailable()
 {
-    qDebug() << "Vulkan is not available, using CPU fallback";
+    qDebug() << "GPU acceleration not available, using CPU fallback";
     // TODO: Disable GPU-accelerated features in the UI
 }

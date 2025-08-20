@@ -1,6 +1,18 @@
-^C:\USERS\ANDRE\DESKTOP\NEWPROJECT\SRC\UI\CMAKELISTS.TXT
+^C:\NEWPROJECT\BUILD\CMAKEFILES\06F3BAF978995E223A8459B51665AEB6\QT6UI-COMPONENTS_METATYPES.JSON.GEN.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/andre/Desktop/NewProject -BC:/Users/andre/Desktop/NewProject/build --check-stamp-file C:/Users/andre/Desktop/NewProject/build/src/ui/CMakeFiles/generate.stamp
+C:\Qt\6.9.1\msvc2022_64\bin\moc.exe -o C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen --collect-json @C:/NewProject/build/src/ui/meta_types/ui-components_json_file_list.txt
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json.gen C:/NewProject/build/src/ui/meta_types/qt6ui-components_metatypes.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\NEWPROJECT\SRC\UI\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/NewProject -BC:/NewProject/build --check-stamp-file C:/NewProject/build/src/ui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

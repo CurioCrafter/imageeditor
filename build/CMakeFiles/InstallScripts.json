@@ -1,11 +1,11 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/andre/Desktop/NewProject/build/cmake_install.cmake",
-		"C:/Users/andre/Desktop/NewProject/build/src/core/cmake_install.cmake",
-		"C:/Users/andre/Desktop/NewProject/build/src/ui/cmake_install.cmake",
-		"C:/Users/andre/Desktop/NewProject/build/src/gpu/cmake_install.cmake",
-		"C:/Users/andre/Desktop/NewProject/build/src/tools/cmake_install.cmake"
+		"C:/NewProject/build/cmake_install.cmake",
+		"C:/NewProject/build/src/core/cmake_install.cmake",
+		"C:/NewProject/build/src/ui/cmake_install.cmake",
+		"C:/NewProject/build/src/gpu/cmake_install.cmake",
+		"C:/NewProject/build/src/tools/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

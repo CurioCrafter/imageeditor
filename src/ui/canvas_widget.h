@@ -1,10 +1,6 @@
 #pragma once
 
-#include <QOpenGLWidget>
-#include <QOpenGLFunctions>
-#include <QOpenGLShaderProgram>
-#include <QOpenGLTexture>
-#include <QOpenGLFramebufferObject>
+#include <QWidget>
 #include <QPainter>
 #include <QTransform>
 #include <QTimer>
@@ -26,7 +22,7 @@ namespace core {
 namespace ui {
 
 // Professional Canvas Widget with GPU acceleration
-class CanvasWidget : public QOpenGLWidget, protected QOpenGLFunctions {
+class CanvasWidget : public QWidget {
     Q_OBJECT
 public:
     CanvasWidget(QWidget* parent = nullptr);
@@ -73,10 +69,9 @@ signals:
     void documentChanged(core::Document* document);
 
 protected:
-    // OpenGL overrides
-    void initializeGL() override;
-    void paintGL() override;
-    void resizeGL(int w, int h) override;
+    // Widget overrides
+    void paintEvent(QPaintEvent* event) override;
+    void resizeEvent(QResizeEvent* event) override;
 
     // Event handling
     void mousePressEvent(QMouseEvent* event) override;
@@ -92,6 +87,7 @@ private:
     std::unique_ptr<Impl> d;
 
     // Internal methods
+    void initializeWidget();
     void updateTransform();
     void drawGrid(QPainter& painter);
     void drawGuides(QPainter& painter);

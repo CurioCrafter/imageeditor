@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.20)
 project(AdvancedImageEditor VERSION 1.0.0 LANGUAGES CXX)
 
+# Enable detailed automoc/autogen output for debugging
+set(CMAKE_AUTOMOC_VERBOSE ON)
+set(CMAKE_AUTOUIC_VERBOSE ON)
+set(CMAKE_AUTORCC_VERBOSE ON)
+
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -26,7 +31,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 # Build options
 option(BUILD_UI "Build user interface components" ON)
-option(BUILD_GPU "Build GPU acceleration components" ON)
+option(BUILD_GPU "Build GPU acceleration components" OFF)  # Temporarily disabled due to MOC issues
 option(BUILD_AI "Build AI integration components" OFF)
 option(BUILD_PLUGINS "Build plugin system" OFF)
 option(BUILD_TESTS "Build test suite" OFF)
@@ -101,8 +106,8 @@ endif()
 # Add tools directory
 add_subdirectory(src/tools)
 
-# Create main executable
-add_executable(image-editor src/main.cpp)
+# Create main executable using Qt's helper function
+qt_add_executable(image-editor src/main.cpp)
 
 # Set properties
 set_target_properties(image-editor PROPERTIES
@@ -110,19 +115,9 @@ set_target_properties(image-editor PROPERTIES
     OUTPUT_NAME "image-editor"
 )
 
-# Link libraries
-target_link_libraries(image-editor core-engine)
-
+# Link libraries - ui-components already links to gpu-acceleration and core-engine
 if(BUILD_UI)
-    target_link_libraries(image-editor ui-components)
-    # Link Qt6 libraries
-    target_link_libraries(image-editor Qt6::Core Qt6::Widgets Qt6::Gui Qt6::OpenGL Qt6::OpenGLWidgets Qt6::Concurrent)
-endif()
-
-if(BUILD_GPU)
-    if(OpenGL_FOUND)
-        target_link_libraries(image-editor OpenGL::GL)
-    endif()
+    target_link_libraries(image-editor PRIVATE ui-components)
 endif()
 
 # Print configuration summary

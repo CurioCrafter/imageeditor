@@ -1,4 +1,4 @@
-C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_layer_panel.cpp: C:/Users/andre/Desktop/NewProject/src/ui/layer_panel.h \
+C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_layer_panel.cpp: C:/NewProject/src/ui/layer_panel.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h \

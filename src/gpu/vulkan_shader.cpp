@@ -1,4 +1,5 @@
 #include "vulkan_renderer.h"
+#include <vulkan/vulkan.h>
 #include <QDebug>
 #include <QFile>
 #include <QDir>
@@ -24,19 +25,13 @@ bool compileShaderToSPIRV(const QString& source, const QString& entryPoint,
 
 VkShaderModule createShaderModule(VkDevice device, const std::vector<uint32_t>& code)
 {
-    VkShaderModuleCreateInfo createInfo{};
-    createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
-    createInfo.codeSize = code.size() * sizeof(uint32_t);
-    createInfo.pCode = code.data();
+    Q_UNUSED(device)
+    Q_UNUSED(code)
     
-    VkShaderModule shaderModule;
-    // TODO: Implement shader creation
-    // if (vkCreateShaderModule(device, &createInfo, nullptr, &shaderModule) != VK_SUCCESS) {
-        qCritical() << "Failed to create shader module";
-        return VK_NULL_HANDLE;
-    }
-    
-    return shaderModule;
+    // TODO: Implement shader creation using Qt Vulkan wrapper
+    // This should use QVulkanDeviceFunctions instead of calling vkCreateShaderModule directly
+    qDebug() << "Shader module creation not yet implemented";
+    return VK_NULL_HANDLE;
 }
 
 } // namespace gpu

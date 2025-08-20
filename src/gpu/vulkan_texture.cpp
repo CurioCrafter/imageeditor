@@ -1,4 +1,5 @@
 #include "vulkan_renderer.h"
+#include <vulkan/vulkan.h>
 #include <QDebug>
 #include <QImage>
 
@@ -9,52 +10,26 @@ namespace gpu {
 VkImage createImage(VkDevice device, uint32_t width, uint32_t height, 
                    VkFormat format, VkImageUsageFlags usage)
 {
-    VkImageCreateInfo imageInfo{};
-    imageInfo.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
-    imageInfo.imageType = VK_IMAGE_TYPE_2D;
-    imageInfo.extent.width = width;
-    imageInfo.extent.height = height;
-    imageInfo.extent.depth = 1;
-    imageInfo.mipLevels = 1;
-    imageInfo.arrayLayers = 1;
-    imageInfo.format = format;
-    imageInfo.tiling = VK_IMAGE_TILING_OPTIMAL;
-    imageInfo.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
-    imageInfo.usage = usage;
-    imageInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
-    imageInfo.samples = VK_SAMPLE_COUNT_1_BIT;
+    Q_UNUSED(device)
+    Q_UNUSED(width)
+    Q_UNUSED(height)
+    Q_UNUSED(format)
+    Q_UNUSED(usage)
     
-    VkImage image;
-    // TODO: Implement image creation
-    // if (vkCreateImage(device, &imageInfo, nullptr, &image) != VK_SUCCESS) {
-        qCritical() << "Failed to create image";
-        return VK_NULL_HANDLE;
-    }
-    
-    return image;
+    // TODO: Implement image creation using Qt Vulkan wrapper
+    qDebug() << "Image creation not yet implemented";
+    return VK_NULL_HANDLE;
 }
 
 VkImageView createImageView(VkDevice device, VkImage image, VkFormat format)
 {
-    VkImageViewCreateInfo viewInfo{};
-    viewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
-    viewInfo.image = image;
-    viewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
-    viewInfo.format = format;
-    viewInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-    viewInfo.subresourceRange.baseMipLevel = 0;
-    viewInfo.subresourceRange.levelCount = 1;
-    viewInfo.subresourceRange.baseArrayLayer = 0;
-    viewInfo.subresourceRange.layerCount = 1;
+    Q_UNUSED(device)
+    Q_UNUSED(image)
+    Q_UNUSED(format)
     
-    VkImageView imageView;
-    // TODO: Implement image view creation
-    // if (vkCreateImageView(device, &viewInfo, nullptr, &imageView) != VK_SUCCESS) {
-        qCritical() << "Failed to create image view";
-        return VK_NULL_HANDLE;
-    }
-    
-    return imageView;
+    // TODO: Implement image view creation using Qt Vulkan wrapper
+    qDebug() << "Image view creation not yet implemented";
+    return VK_NULL_HANDLE;
 }
 
 bool createTextureFromQImage(VkDevice device, const QImage& qimage, 

@@ -1,8 +1,6 @@
 #include "canvas_widget.h"
 #include "../core/document.h"
 #include "../core/tool.h"
-#include <QOpenGLFramebufferObject>
-#include <QOpenGLPaintDevice>
 #include <QPainter>
 #include <QWheelEvent>
 #include <QtMath>
@@ -12,13 +10,12 @@
 
 namespace ui {
 
-// Canvas implementation with proper OpenGL acceleration
+// Canvas implementation with CPU rendering (Vulkan integration planned)
 class CanvasWidget::Impl {
 public:
     // Document and rendering
     core::Document* document = nullptr;
-    QOpenGLFramebufferObject* fbo = nullptr;
-    QOpenGLShaderProgram* compositeShader = nullptr;
+    QImage renderBuffer;
     
     // Viewport state
     QTransform viewTransform;
@@ -107,18 +104,15 @@ public:
 };
 
 CanvasWidget::CanvasWidget(QWidget* parent)
-    : QOpenGLWidget(parent)
+    : QWidget(parent)
     , d(std::make_unique<Impl>())
 {
     setMouseTracking(true);
     setFocusPolicy(Qt::StrongFocus);
     
-    // Enable OpenGL acceleration
-    QSurfaceFormat format;
-    format.setVersion(3, 3);
-    format.setProfile(QSurfaceFormat::CoreProfile);
-    format.setSamples(4);
-    setFormat(format);
+    // Enable high-performance rendering
+    setAttribute(Qt::WA_OpaquePaintEvent);
+    setAttribute(Qt::WA_NoSystemBackground);
     
     // Setup update timer for smooth animations
     auto updateTimer = new QTimer(this);
@@ -224,53 +218,52 @@ void CanvasWidget::resetView() {
     update();
 }
 
-void CanvasWidget::initializeGL() {
-    initializeOpenGLFunctions();
+void CanvasWidget::initializeWidget() {
+    // Initialize widget for high-performance rendering
     
     // Setup composite shader for layer blending
-    d->compositeShader = new QOpenGLShaderProgram(this);
+    // d->compositeShader = new QOpenGLShaderProgram(this); // Removed OpenGL shader
     
-    const char* vertexShader = R"(
-        #version 330 core
-        layout(location = 0) in vec2 position;
-        layout(location = 1) in vec2 texCoord;
-        out vec2 fragTexCoord;
-        uniform mat4 transform;
+    // const char* vertexShader = R"( // Removed OpenGL shader
+    //     #version 330 core
+    //     layout(location = 0) in vec2 position;
+    //     layout(location = 1) in vec2 texCoord;
+    //     out vec2 fragTexCoord;
+    //     uniform mat4 transform;
         
-        void main() {
-            gl_Position = transform * vec4(position, 0.0, 1.0);
-            fragTexCoord = texCoord;
-        }
-    )";
+    //     void main() {
+    //         gl_Position = transform * vec4(position, 0.0, 1.0);
+    //         fragTexCoord = texCoord;
+    //     }
+    // )";
     
-    const char* fragmentShader = R"(
-        #version 330 core
-        in vec2 fragTexCoord;
-        out vec4 fragColor;
-        uniform sampler2D texture0;
-        uniform float opacity;
+    // const char* fragmentShader = R"( // Removed OpenGL shader
+    //     #version 330 core
+    //     in vec2 fragTexCoord;
+    //     out vec4 fragColor;
+    //     uniform sampler2D texture0;
+    //     uniform float opacity;
         
-        void main() {
-            fragColor = texture(texture0, fragTexCoord);
-            fragColor.a *= opacity;
-        }
-    )";
+    //     void main() {
+    //         fragColor = texture(texture0, fragTexCoord);
+    //         fragColor.a *= opacity;
+    //     }
+    // )";
     
-    d->compositeShader->addShaderFromSourceCode(QOpenGLShader::Vertex, vertexShader);
-    d->compositeShader->addShaderFromSourceCode(QOpenGLShader::Fragment, fragmentShader);
-    d->compositeShader->link();
+    // d->compositeShader->addShaderFromSourceCode(QOpenGLShader::Vertex, vertexShader); // Removed OpenGL shader
+    // d->compositeShader->addShaderFromSourceCode(QOpenGLShader::Fragment, fragmentShader); // Removed OpenGL shader
+    // d->compositeShader->link(); // Removed OpenGL shader
 }
 
-void CanvasWidget::paintGL() {
+void CanvasWidget::paintEvent(QPaintEvent* event) {
+    Q_UNUSED(event)
     auto startTime = std::chrono::steady_clock::now();
     
-    // Clear background
-    glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
+    // Clear background with QPainter
+    QPainter painter(this);
+    painter.fillRect(rect(), QColor(51, 51, 51, 255)); // Dark gray background
     
     if (!d->document) return;
-    
-    QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
     painter.setRenderHint(QPainter::SmoothPixmapTransform, d->quality != Impl::Draft);
     
@@ -332,8 +325,8 @@ void CanvasWidget::paintGL() {
     }
 }
 
-void CanvasWidget::resizeGL(int w, int h) {
-    glViewport(0, 0, w, h);
+void CanvasWidget::resizeEvent(QResizeEvent* event) {
+    QWidget::resizeEvent(event);
     updateTransform();
 }
 
@@ -569,7 +562,7 @@ void CanvasWidget::setRenderQuality(RenderQuality quality) {
 
 void CanvasWidget::keyReleaseEvent(QKeyEvent* event) {
     // Handle key release events
-    QOpenGLWidget::keyReleaseEvent(event);
+    QWidget::keyReleaseEvent(event);
 }
 
 } // namespace ui

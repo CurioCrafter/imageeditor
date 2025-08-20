@@ -1,4 +1,4 @@
-C:/Users/andre/Desktop/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_document.cpp: C:/Users/andre/Desktop/NewProject/src/core/document.h \
+C:/NewProject/build/src/core/core-engine_autogen/include_Release/EWIEGA46WW/moc_document.cpp: C:/NewProject/src/core/document.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \

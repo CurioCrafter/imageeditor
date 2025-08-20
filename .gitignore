@@ -1,0 +1,80 @@
+# Build directories
+build/
+build-*/
+*-build/
+
+# Qt generated files
+*.pro.user*
+*.qm
+*.prl
+*_qmlcache.qrc
+
+# IDE files
+.vscode/
+.vs/
+*.vcxproj.user
+*.sln.docstates
+*.suo
+*.sdf
+*.opensdf
+*.db
+*.opendb
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.obj
+*.o
+
+# Debug files
+*.pdb
+*.idb
+*.ilk
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package managers
+node_modules/
+.npm
+.yarn/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed

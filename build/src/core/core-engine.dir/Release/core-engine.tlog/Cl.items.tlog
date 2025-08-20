@@ -1,6 +1,6 @@
-C:\Users\andre\Desktop\NewProject\src\core\engine.cpp;C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.dir\Release\engine.obj
-C:\Users\andre\Desktop\NewProject\src\core\layer.cpp;C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.dir\Release\layer.obj
-C:\Users\andre\Desktop\NewProject\src\core\document.cpp;C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.dir\Release\document.obj
-C:\Users\andre\Desktop\NewProject\src\core\brush_engine.cpp;C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.dir\Release\brush_engine.obj
-C:\Users\andre\Desktop\NewProject\src\core\tool.cpp;C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.dir\Release\tool.obj
-C:\Users\andre\Desktop\NewProject\build\src\core\core-engine_autogen\mocs_compilation_Release.cpp;C:\Users\andre\Desktop\NewProject\build\src\core\core-engine.dir\Release\mocs_compilation_Release.obj
+C:\NewProject\src\core\engine.cpp;C:\NewProject\build\src\core\core-engine.dir\Release\engine.obj
+C:\NewProject\src\core\layer.cpp;C:\NewProject\build\src\core\core-engine.dir\Release\layer.obj
+C:\NewProject\src\core\document.cpp;C:\NewProject\build\src\core\core-engine.dir\Release\document.obj
+C:\NewProject\src\core\brush_engine.cpp;C:\NewProject\build\src\core\core-engine.dir\Release\brush_engine.obj
+C:\NewProject\src\core\tool.cpp;C:\NewProject\build\src\core\core-engine.dir\Release\tool.obj
+C:\NewProject\build\src\core\core-engine_autogen\mocs_compilation_Release.cpp;C:\NewProject\build\src\core\core-engine.dir\Release\mocs_compilation_Release.obj

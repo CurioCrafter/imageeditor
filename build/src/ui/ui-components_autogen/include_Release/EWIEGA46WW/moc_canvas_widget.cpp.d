@@ -1,7 +1,6 @@
-C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_canvas_widget.cpp: C:/Users/andre/Desktop/NewProject/src/ui/canvas_widget.h \
+C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_canvas_widget.cpp: C:/NewProject/src/ui/canvas_widget.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QPointF \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \
-  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QScopedPointer \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QTimer \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
@@ -70,7 +69,6 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qmetatype.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qminmax.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qnamespace.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qnumeric.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobject.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qobject_impl.h \
@@ -136,9 +134,7 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QImage \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QOpenGLFunctions \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QPainter \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/QSurfaceFormat \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/QTransform \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qaction.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qbitmap.h \
@@ -149,16 +145,9 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qfontmetrics.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qfontvariableaxis.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qgenericmatrix.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qicon.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qimage.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qkeysequence.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qmatrix4x4.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qopengl.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qopenglcontext.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qopenglcontext_platform.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qopenglext.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qopenglfunctions.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qpainter.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qpalette.h \
@@ -166,34 +155,16 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qpixmap.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qpolygon.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qquaternion.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qregion.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qrgb.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qrgba64.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qsurfaceformat.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtextoption.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qtransform.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qvector2d.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qvector3d.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qvector4d.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtGui/qvectornd.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/QOpenGLFramebufferObject \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/QOpenGLShaderProgram \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/QOpenGLTexture \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/qopenglframebufferobject.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/qopenglshaderprogram.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/qopengltexture.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/qtopenglexports.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGL/qtopenglglobal.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets/QOpenGLWidget \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets/qopenglwidget.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/QWidget \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qtwidgets-config.h \

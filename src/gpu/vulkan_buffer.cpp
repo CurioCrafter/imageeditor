@@ -1,4 +1,5 @@
 #include "vulkan_renderer.h"
+#include <vulkan/vulkan.h>
 #include <QDebug>
 
 namespace gpu {
@@ -8,20 +9,13 @@ namespace gpu {
 
 VkBuffer createBuffer(VkDevice device, VkDeviceSize size, VkBufferUsageFlags usage)
 {
-    VkBufferCreateInfo bufferInfo{};
-    bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
-    bufferInfo.size = size;
-    bufferInfo.usage = usage;
-    bufferInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
+    Q_UNUSED(device)
+    Q_UNUSED(size)
+    Q_UNUSED(usage)
     
-    VkBuffer buffer;
-    // TODO: Implement buffer creation
-    // if (vkCreateBuffer(device, &bufferInfo, nullptr, &buffer) != VK_SUCCESS) {
-        qCritical() << "Failed to create buffer";
-        return VK_NULL_HANDLE;
-    }
-    
-    return buffer;
+    // TODO: Implement buffer creation using Qt Vulkan wrapper
+    qDebug() << "Buffer creation not yet implemented";
+    return VK_NULL_HANDLE;
 }
 
 } // namespace gpu

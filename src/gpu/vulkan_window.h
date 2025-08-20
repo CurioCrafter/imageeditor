@@ -4,6 +4,7 @@
 #include <QVulkanInstance>
 #include <QExposeEvent>
 #include <QResizeEvent>
+#include <QString>
 
 namespace core { class Engine; }
 

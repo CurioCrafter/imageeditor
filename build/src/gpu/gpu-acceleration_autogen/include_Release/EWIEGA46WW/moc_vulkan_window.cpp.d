@@ -1,4 +1,4 @@
-C:/Users/andre/Desktop/NewProject/build/src/gpu/gpu-acceleration_autogen/include_Release/EWIEGA46WW/moc_vulkan_window.cpp: C:/Users/andre/Desktop/NewProject/src/gpu/vulkan_window.h \
+C:/NewProject/build/src/gpu/gpu-acceleration_autogen/include_Release/EWIEGA46WW/moc_vulkan_window.cpp: C:/NewProject/src/gpu/vulkan_window.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QEvent \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QMargins \
@@ -6,6 +6,7 @@ C:/Users/andre/Desktop/NewProject/build/src/gpu/gpu-acceleration_autogen/include
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QRect \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QSizeF \
+  C:/Qt/6.9.1/msvc2022_64/include/QtCore/QString \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/q20iterator.h \

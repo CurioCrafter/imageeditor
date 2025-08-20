@@ -1,4 +1,5 @@
-C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_canvas_view.cpp: C:/Users/andre/Desktop/NewProject/src/ui/canvas_view.h \
+C:/NewProject/build/src/ui/ui-components_autogen/include_Release/EWIEGA46WW/moc_canvas_view.cpp: C:/NewProject/src/ui/canvas_view.h \
+  C:/NewProject/src/core/document.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.1/msvc2022_64/include/QtCore/QObject \
@@ -214,5 +215,4 @@ C:/Users/andre/Desktop/NewProject/build/src/ui/ui-components_autogen/include_Rel
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qwidget.h \
-  C:/Users/andre/Desktop/NewProject/src/core/document.h
+  C:/Qt/6.9.1/msvc2022_64/include/QtWidgets/qwidget.h

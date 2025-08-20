@@ -2,7 +2,19 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\andre\Desktop\NewProject\build\x64\Release\ZERO_CHECK</FullPath>
+      <FullPath>C:\NewProject\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\NewProject\build\src\gpu\x64\Release\gpu-acceleration_autogen</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\NewProject\build\src\gpu\x64\Release\gpu-acceleration_automoc_json_extraction</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\NewProject\build\src\ui\x64\Release\ui-components_autogen</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\NewProject\build\src\ui\x64\Release\ui-components_automoc_json_extraction</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
